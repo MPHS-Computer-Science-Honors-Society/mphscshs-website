@@ -1,0 +1,127 @@
+/* importing fonts (inter, barlow, JB mono) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/*root applies to everything*/
+:root {
+    font-size: 16px;
+    /*variables*/
+    --text-primary: white;
+    --text-secondary: green;
+    --font-primary: "Barlow";
+    --font-secondary: "Inter";
+    --font-code: "JetBrains+Mono";
+    --bg-primary: #1b2b3d;
+    --bg-secondary: #152334;
+}
+
+body {
+    /* color: black;
+    background-color: white; */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+}
+
+body::-webkit-scrollbar {
+    width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: green;
+}
+
+main {
+    /*rem is proportional to font-size. Ex: 16 (fontsize) * 5 (rem) = 80 px */
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+p {
+    color: var(--text-primary);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 8px;
+    width: 95vw;
+    max-width: 700px;
+    font-family: var(--font-primary);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* navigation bar stuff here */
+
+.topnav {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(61, 75, 92, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(20px); /* makes the nac blurry and*/
+    box-shadow: 0 1px 12px rgba(37, 37, 37, 0.25);
+    position: fixed; 
+    top: 0;
+    width: 100vw;
+    left: 0px;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: max(16px, 1vw);
+    transition-duration: 0.2s;
+}
+
+.topnavtext a {
+    padding: max(14px, (5px + 0.5vw)) min(16px, (5px + 0.8vw));
+}
+
+.topnav a.split {
+    float: right;
+}
+  
+.topnav a.activepage:hover {
+    background-color: #22353c;
+    transition-duration: 0.4s;
+}
+
+.topnav a.activepage:active {
+    background-color: #2d454e;
+    transition-duration: 0.1s;
+}
+  
+.topnav a:hover {
+    background-color: rgba(37, 37, 37);
+    transition-duration: 0.4s;
+}
+  
+.topnav a:active {
+    background-color: rgb(47, 47, 47);
+    transition-duration: 0.1s;
+}
+  
+.topnav a.activepage {
+    background-color: #152334;
+}
+  
+.topnav .icon {
+    display: none;
+}
+/* end navigation bar stuff */
