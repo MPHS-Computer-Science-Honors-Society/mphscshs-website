@@ -8,12 +8,12 @@
     font-size: 16px;
     /*variables*/
     --text-primary: white;
-    --text-secondary: green;
-    --font-primary: "Barlow";
-    --font-secondary: "Inter";
+    --text-secondary: #2cac6a;
+    --font-primary: "Inter";
+    --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
-    --bg-primary: #1b2b3d;
-    --bg-secondary: #152334;
+    --bg-primary: #152334;
+    --bg-secondary: #182738;
 }
 
 body {
@@ -54,6 +54,12 @@ p {
     font-family: var(--font-primary);
 }
 
+.title {
+    font-size: 60px;
+    font-family: var(--font-secondary);
+    color: var(--text-secondary);
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -62,21 +68,46 @@ p {
 
 /* navigation bar stuff here */
 
+.textbox {
+    background-color: var(--bg-secondary);
+    max-width: 700px;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    /* makes the nav blurry and*/
+    box-shadow: 0 1px 12px rgba(7, 7, 7, 0.55);
+    padding: 6px 6px;
+}
+
 .topnav {
     overflow: hidden;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgba(61, 75, 92, 0.5);
-    border-radius: 8px;
-    backdrop-filter: blur(20px); /* makes the nac blurry and*/
+    border-radius: 0px 0px 0px 8px;
+    backdrop-filter: blur(20px);
+    /* makes the nac blurry and*/
     box-shadow: 0 1px 12px rgba(37, 37, 37, 0.25);
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100vw;
+    height: auto;
     left: 0px;
     z-index: 1;
     font-family: var(--font-primary);
+    /* below makes this a flex container and gives it some of its properties */
+}
+
+.flexer {
+    /* display: block; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute; left: 50%; transform: translateX(-50%);
+    /* column-gap: 2rem; removed so the buttons connect*/
+
 }
 
 .topnav a {
@@ -89,39 +120,68 @@ p {
     transition-duration: 0.2s;
 }
 
-.topnavtext a {
-    padding: max(14px, (5px + 0.5vw)) min(16px, (5px + 0.8vw));
+.text {
+    font-size:max(6px);
 }
 
-.topnav a.split {
-    float: right;
-}
-  
-.topnav a.activepage:hover {
-    background-color: #22353c;
-    transition-duration: 0.4s;
+.topnavitem {
+    padding: max(14px, (5px + 0.5vw)) min(16px + 1rem, (5px + 0.8vw + 1rem));
 }
 
-.topnav a.activepage:active {
-    background-color: #2d454e;
-    transition-duration: 0.1s;
-}
-  
 .topnav a:hover {
     background-color: rgba(37, 37, 37);
     transition-duration: 0.4s;
 }
-  
+
 .topnav a:active {
     background-color: rgb(47, 47, 47);
     transition-duration: 0.1s;
 }
-  
-.topnav a.activepage {
-    background-color: #152334;
+
+.topnav a.activepage:hover {
+    /* background-color: #22353c;
+    transition-duration: 0.4s; */
 }
-  
+
+.topnav a.activepage:active {
+    /* background-color: #2d454e;
+    transition-duration: 0.1s; */
+}
+
+.topnav a.activepage {
+    /* background-color: #152334; */
+}
+
 .topnav .icon {
     display: none;
 }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+.topnav div {display: none;}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+.topnav.responsive div {
+    display: block;
+}
+}
+
 /* end navigation bar stuff */
