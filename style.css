@@ -24,6 +24,7 @@ body {
     background-color: var(--bg-primary);
 }
 
+/* scroll bar settings */
 body::-webkit-scrollbar {
     width: .5rem;
 }
