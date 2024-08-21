@@ -10,6 +10,7 @@
     --text-primary: white;
     --text-secondary: #2cac6a;
     --text-thirdendary: rgb(169, 255, 208);
+    --tempo: rgba(255, 255, 255, 0.5);
     --font-primary: "Inter";
     --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
@@ -72,11 +73,11 @@ p {
 
 .textbox {
     background-color: var(--bg-secondary);
-    max-width: 800px;
+    max-width: 1300px;
     border-radius: 8px;
     backdrop-filter: blur(20px);
     box-shadow: 0 1px 12px rgba(7, 7, 7, 0.55);
-    padding: 4px 4px;
+    padding: 20px 20px;
 }
 
 .aboutus {
@@ -97,6 +98,8 @@ p {
     /* padding: 20px 20px; */
 }
 
+
+
 .split {
     /* max-width: 90%; */
     display: flex;
@@ -106,9 +109,10 @@ p {
 }
 
 .split div.leftsplit {
-    width: 60%;
+    width: 100%;
     /*left: 0px;*/
     margin-right: auto;
+    margin-left: 0;
 }
 
 .split div.leftsplit p {
@@ -116,15 +120,25 @@ p {
     max-width: none;
 }
 
+.split div.leftsplit img {
+    width: 100%;
+    height: 100%
+}
+
 .split div.rightsplit {
     margin-left: auto;
-    width: 37%;
+    width: 100%;
     /*right: 0px;*/
     margin-right: 0;
 }
 
 .split div.rightsplit img {
     width: 100%;
+}
+
+.split div.rightsplit p {
+    width: 100%;
+    max-width: none;
 }
 
 @media screen and (max-width: 750px) {
@@ -159,7 +173,7 @@ p {
 .topnav {
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 0px 5px;
     overflow: hidden;
     background-color: rgba(61, 75, 92, 0.5);
     /* border-radius: 0px 0px 0px 8px; */
