@@ -11,11 +11,24 @@
     --text-secondary: #2cac6a;
     --text-thirdendary: rgb(169, 255, 208);
     --tempo: rgba(255, 255, 255, 0.5);
+    --splode-power: 1.85;
     --font-primary: "Inter";
     --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
     --bg-primary: #152334;
     --bg-secondary: #182738;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+
+    /* fallback height  */
+    min-height: 100vh;
+
+    /* new small viewport height for modern browsers  */
+    min-height: 100svh;
 }
 
 body {
@@ -41,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 
 main {
     /*rem is proportional to font-size. Ex: 16 (fontsize) * 5 (rem) = 80 px */
-    margin-top: 5rem;
+    margin-top: 4rem;
     /* padding: 1rem; */
 }
 
@@ -63,7 +76,8 @@ p {
     max-width: 100%;
     font-size: min(60pt, 10vw);
     font-weight: 700;
-    padding-bottom: 20px;
+    padding-top: 0.5vw;
+    padding-bottom: 1vh;
 }
 
 .title span {
@@ -80,6 +94,10 @@ p {
     margin-bottom: 40px;
 }
 
+.top {
+    margin-top: 4hv;
+}
+
 /* navigation bar stuff here */
 
 .textbox {
@@ -94,7 +112,7 @@ p {
 
 .aboutus {
     /* margin-top: 5rem; */
-    max-width: min(90%, 1900px);
+    max-width: min(90%, 1800px);
     background-color: var(--bg-secondary);
     width: 100%;
     /* height: 30rem; */
@@ -108,7 +126,7 @@ p {
     max-width: 800px;
     background-color: var(--bg-secondary);
     width: 80%;
-    height: 100%;
+    /* height: 100%; */
     /* padding: 20px 20px; */
 }
 
@@ -133,6 +151,7 @@ p {
 
 .split div.splitsection img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .split div.splitsection p {
@@ -146,6 +165,10 @@ p {
     color: var(--text-secondary);
     max-width: 100%;
     font-weight: 550;
+}
+
+.code {
+    font-family: "Space Mono", monospace;
 }
 
 
@@ -190,38 +213,44 @@ p {
 
     .footer-heading {
         margin-right: 0rem;
+        margin: 0px 0px;
     }
+
+    .footer-2 {
+        margin-right: 0px;
+    }
+}
+
+.center p span {
+    font-size: 50;
+    color: var(--text-thirdendary);
 }
 
 .topnav {
     overflow: hidden;
     margin: 0;
     padding: 0px 0px;
-    background-color: rgba(61, 75, 92, 0.5);
-    /* border-radius: 0px 0px 0px 8px; */
+    background-color: var(--bg-secondary);
     backdrop-filter: blur(20px);
-    /* makes the nac blurry and*/
     box-shadow: 0 1px 12px rgba(37, 37, 37, 0.25);
     position: fixed;
     top: 0;
     width: 100vw;
     height: auto;
+    max-height: 100px;
     left: 0px;
-    z-index: 1;
+    z-index: 10000;
     font-family: var(--font-primary);
-    /* below makes this a flex container and gives it some of its properties */
+    box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);
 }
 
 .flexer {
-    /* display: block; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    /* column-gap: 2rem; removed so the buttons connect*/
 
 }
 
@@ -231,8 +260,9 @@ p {
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: max(16px, 1vw);
+    font-size: min(24px, max(16px, 1vw));
     transition-duration: 0.2s;
+    align-self: center;
 }
 
 .text {
@@ -240,7 +270,7 @@ p {
 }
 
 .topnavitem {
-    padding: max(14px, (5px + 0.5vw)) min(16px + 1rem, (5px + 0.8vw + 1rem));
+    padding: min(max(14px, (5px + 0.5vw)), 24px) min(16px + 1rem, (5px + 0.8vw + 1rem));
 }
 
 .topnav a:hover {
@@ -251,9 +281,7 @@ p {
 .topnav a.logo:hover {
     background-color: rgba(37, 37, 37);
     transition-duration: 0.4s;
-    /* -webkit-filter: grayscale(100%), brightness(200%); */
-    /* filter: contrast(1000%); */
-    filter: grayscale(100%);
+    --webkit-filter: grayscale(100%) filter: grayscale(100%);
 }
 
 .topnav a:active {
@@ -283,6 +311,10 @@ p {
     background-color: var(--bg-secondary);
     /* padding-bottom: 1rem; */
     box-sizing: border-box;
+    position: relative;
+    /* z-index: 0; */
+    margin-top: 1.5vw;
+    box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);
 }
 
 .footer {
@@ -296,7 +328,7 @@ p {
     flex-wrap: wrap;
     /* align-items: center; */
     margin: 0 auto;
-    
+
 }
 
 .footer-heading {
@@ -320,7 +352,7 @@ p {
     color: var(--text-primary);
     text-decoration: none;
     margin-bottom: .5rem;
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-size: 20px;
 }
 
@@ -334,21 +366,55 @@ p {
     .topnav a:not(:first-child) {
         display: none;
     }
-    
+
     .topnav a.icon {
         float: right;
         display: block;
     }
-    
+
     .topnav div {
         display: none;
     }
+}
+
+/* < !-- HTML !--><button class="button-22" role="button">Button 22</button> */
+.formbutton {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: var(--text-secondary);
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: var(--font-secondary);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    margin: 5px 2px;
+}
+
+.grayed {
+    background-color: gray;
+}
+
+.formbutton:hover {
+    background: #4ae093;
+    box-shadow: 0 6px 20px rgba(41, 244, 88, 0.23);
+}
+.grayed:hover {
+    background-color: rgb(85, 85, 85);
+    color: gray;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.23);
 }
 
 /* The "responsive" class is added to  the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width:750px) {
     .topnav.responsive {
         position: relative;
+        max-height: 100000px;
     }
 
     .topnav.responsive a.icon {
@@ -365,6 +431,16 @@ p {
 
     .topnav.responsive div {
         display: block;
+    }
+
+    .formbutton {
+        display: inline-block;
+        padding: 0 20px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 7px;
+        font-size: 16px;
+        margin: 5px 2px;
     }
 }
 
@@ -387,22 +463,24 @@ p {
     width: 90%;
     border-radius: 20px 20px;
     padding: 20px;
+    margin-bottom: 3.5vh;
 }
 
 .splode {
-    box-shadow: 0px 50px 80px 0px rgb(0, 0, 0),
-        0 0 5px 0px rgb(21, 34, 51),
-        0 0 5px 0px rgb(21, 34, 51),
-        0 0 5px 0px rgb(21, 34, 51),
-        0 0 5px 0px rgb(21, 34, 51),
-        0 0 5px 0px rgb(21, 34, 51),
-        0 0 5px 0px rgb(21, 34, 51);
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0, ),
+        0 0 0px 0px rgb(21, 34, 51),
+        0 0 0px 0px rgb(21, 34, 51),
+        0 0 0px 0px rgb(21, 34, 51),
+        0 0 0px 0px rgb(21, 34, 51),
+        0 0 0px 0px rgb(21, 34, 51),
+        0 0 0px 0px rgb(21, 34, 51);
     transition: 2s;
     transition-timing-function: ease-out;
+    position: relative;
 }
 
 .splode:hover {
-    border-radius: 50%;
+    border-radius: 8px;
     box-shadow: 0 0 10px 10px rgb(44, 172, 106),
         0 0 30px 50px rgb(0, 151, 114),
         0 0 50px 100px rgb(0, 131, 118),
@@ -415,31 +493,78 @@ p {
 .splode:active {
     border-radius: 10%;
     transition: 0.5s;
-    
+
     box-shadow: 0 0 10px 10px rgb(44, 172, 106),
         0 0 35px 70px rgb(0, 151, 114),
         0 0 65px 130px rgb(0, 131, 118),
         0 0 110px 220px rgb(0, 110, 115),
         0 0 175px 350px rgb(0, 90, 107),
         0 0 250px 500px rgb(0, 70, 92),
-        0 0 350px 700px rgb(15, 51, 73);
+        0 0 450px 700px rgb(15, 51, 73);
 }
 
+.splodebox {
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0, ),
+        0 0 5px 0px rgb(21, 34, 51),
+        0 0 5px 0px rgb(21, 34, 51),
+        0 0 5px 0px rgb(21, 34, 51),
+        0 0 5px 0px rgb(21, 34, 51),
+        0 0 5px 0px rgb(21, 34, 51),
+        0 0 5px 0px rgb(21, 34, 51);
+    transition: 2s;
+    transition-timing-function: ease-out;
+    position: relative;
+
+    z-index: 2;
+}
+
+.splodebox:hover {
+    box-shadow: 0 0 5px 5px rgb(44, 172, 106),
+        0 0 calc(var(--splode-power) * 4px) calc(var(--splode-power) * 6px) rgb(0, 151, 114),
+        0 0 calc(var(--splode-power) * 8px) calc(var(--splode-power) * 7px) rgb(0, 131, 118),
+        0 0 calc(var(--splode-power) * 11px) calc(var(--splode-power) * 22px) rgb(0, 110, 115),
+        0 0 calc(var(--splode-power) * 16px) calc(var(--splode-power) * 32px) rgb(0, 90, 107),
+        0 0 calc(var(--splode-power) * 22px) calc(var(--splode-power) * 44px) rgb(0, 70, 92),
+        0 0 calc(var(--splode-power) * 40px) calc(var(--splode-power) * 60px) rgb(15, 51, 73);
+
+    z-index: 0 !important;
+}
+
+/* .splodebox:active {
+    transition: 0.5s;
+
+    box-shadow: 0 0 10px 10px rgb(44, 172, 106),
+        0 0 calc(var(--splode-power) * 10px) calc(var(--splode-power) * 14px) rgb(0, 151, 114),
+        0 0 calc(var(--splode-power) * 18px) calc(var(--splode-power) * 26px) rgb(0, 131, 118),
+        0 0 calc(var(--splode-power) * 25px) calc(var(--splode-power) * 44px) rgb(0, 110, 115),
+        0 0 calc(var(--splode-power) * 30px) calc(var(--splode-power) * 70px) rgb(0, 90, 107),
+        0 0 calc(var(--splode-power) * 60px) calc(var(--splode-power) * 100px) rgb(0, 70, 92),
+        0 0 calc(var(--splode-power) * 200px) calc(var(--splode-power) * 140px) rgb(15, 51, 73);
+} */
+
 @keyframes example {
-    0%   {height: 0%; width: 0%; }
-    100% {height: 100%; width: 100%; }
-  }
-  .example {
+    0% {
+        height: 0%;
+        width: 0%;
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.example {
     animation-name: example;
     animation-duration: 2s;
     background-image: -moz-radial-gradient(center, ellipse cover, rgba(228, 245, 252, 0) 0%, rgba(191, 232, 249, 0.45) 30%, #72cbf3 66%, rgba(112, 202, 243, 0) 67%, rgba(42, 176, 237, 0) 100%);
     background-image: -webkit-radial-gradient(center, ellipse cover, rgba(228, 245, 252, 0) 0%, rgba(191, 232, 249, 0.45) 30%, #72cbf3 66%, rgba(112, 202, 243, 0) 67%, rgba(42, 176, 237, 0) 100%);
     background-image: radial-gradient(ellipse cover at center, rgba(228, 245, 252, 0) 0%, rgba(191, 232, 249, 0.45) 30%, #72cbf3 66%, rgba(112, 202, 243, 0) 67%, rgba(42, 176, 237, 0) 100%);
-  }
-  
-  #ping {
+}
+
+#ping {
     display: none;
     /* background size does the ping */
     background-size: 00%;
     position: absolute;
-  }
+}

@@ -1,16 +1,16 @@
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-    var y = document.getElementById("menuitems");
-    if (y.className === "flexer") {
-        y.className -= " flexer";
-    } else {
-        y.className = "flexer";
-    }
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+  var y = document.getElementById("menuitems");
+  if (y.className === "flexer") {
+    y.className -= " flexer";
+  } else {
+    y.className = "flexer";
+  }
 }
 function doTouch(event) {
   var clientX = event.touches[0].clientX;
@@ -29,8 +29,8 @@ var pingName = 'example';
 function pingEffect(clientX, clientY) {
   // get and position the ping element
   var ping = document.getElementById('ping');
-  ping.style.left = clientX+'px';
-  ping.style.top = clientY+'px';
+  ping.style.left = clientX + 'px';
+  ping.style.top = clientY + 'px';
   ping.style.transform = 'translate(-50%, -50%)';
   ping.style.display = 'block';
   // run the animation
@@ -40,3 +40,25 @@ function pingEffect(clientX, clientY) {
 }
 document.addEventListener('touchstart', doTouch);
 document.addEventListener('click', doClick);
+
+var lastForm = 0
+
+function attendenceForm(form) {
+  console.log(lastForm)
+  if (document.getElementById("attendence-form").src.includes("google") && lastForm == form) {
+    // console.log(document.getElementById("attendence-form").src)
+    document.getElementById("attendence-form").height = 50;
+    document.getElementById("attendence-form").src = "";
+  } else {
+    if (form == 1) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true"
+      lastForm = form;
+    } else if (form == 2) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScQ1a3tEsdzoY0e2uMP2xa7jrDoWPFdJAOFlbRWjcjiMpA9KA/viewform?embedded=true"
+      lastForm = form;
+    } else {
+      exit();
+    }
+    document.getElementById("attendence-form").height = 700;
+  }
+}

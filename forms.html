@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="container">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/CSHS_Website_Logo.png" />
+    <title>
+      Forms - CSHS
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- nav bar -->
+  <div class="topnav" id="myTopnav">
+    <a class="activepage logo" style="padding: 6px min((5px + 0.3vw), (5px + 0.8vw)); display: inline-block;"
+      href="index.html"><img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo"
+        style="height: 2em;"></a>
+    <div class="flexer" id="menuitems">
+      <a class="topnavitem" href="documents.html">Documents</a>
+      <a class="topnavitem" href="forms.html" target="_blank">Forms</a>
+      <a class="topnavitem" href="leadership.html" target="_blank" class="splitright">Leadership</a>
+    </div>
+    <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <body>
+    <main>
+      <p class="center title">
+        <span style="color: var(--text-primary)">
+          &lt;
+        </span>
+        Forms
+        <span style="color: var(--text-primary)">
+          >
+        </span>
+      </p>
+
+      <div class="center aboutus box">
+        <p class="title">
+          <b>
+            Attendence Form
+          </b>
+        </p>
+        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true" width="100%" max-width="900px" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        <ul style="text-align: center;">
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(1)">9/27/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(2)">10/11/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(3)">10/25/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(4)">11/8/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(5)">11/22/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(6)">12/6/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(7)">1/10/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(8)">1/31/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(9)">2/14/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(10)">2/28/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(11)">3/7/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(12)">3/14/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(13)">3/28/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(14)">4/11/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(15)">4/25/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(16)">5/9/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(17)">5/23/2025</button>
+        </ul>
+        <iframe id="attendence-form" src="" width="700px" max-width="900px" height="50px" frameborder="0"
+          marginheight="0" marginwidth="0" class="center">Loading…</iframe>
+      </div>
+
+      <div class="center aboutus box splodebox">
+        <p class="title">
+          <b>
+            Feedback Form
+          </b>
+        </p>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true"
+          width="100%" max-width="900px" height="800px" frameborder="0" marginheight="0"
+          marginwidth="0">Loading…</iframe>
+      </div>
+
+
+    </main>
+
+    <script src="index.js"></script>
+    <script src="tilt.js"></script>
+  </body>
+  <footer class="footer-container splode">
+    <div class="footer">
+      <div class="footer-heading footer-1">
+        <h2>Contact Us</h2>
+        <a href="mailto:leadership@myersparkcshs.club">CSHS Email</a>
+        <a href="mailto:president@myersparkcshs.club">President Email</a>
+        <a href="mailto:vicepresedent@myersparkcshs.club">Vice President Email</a>
+        <a href="mailto:secretary@myersparkcshs.club">Secretary Email</a>
+        <a href="mailto:treasurer@myersparkcshs.club">Treasurer Email</a>
+        <a href="mailto:webmaster@myersparkcshs.club"> Webmaster Email</a>
+        <a href="forms.html">Join</a>
+      </div>
+      <div class="footer-heading footer-2">
+        <h2>Socials</h2>
+        <a href="https://instagram.com/myerspark_cshs">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</html>

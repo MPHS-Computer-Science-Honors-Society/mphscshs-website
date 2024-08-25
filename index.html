@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- the container part is so the footer doesn't get messed up by shorter content -->
+<div id="container">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="assets/icons/CSHS_Website_Logo.png" />
-  <title>
-    Home - CSHS
-  </title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/icons/CSHS_Website_Logo.png" />
+    <title>
+      Home - CSHS
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- nav bar -->
-<div class="topnav" id="myTopnav">
-  <a class="activepage logo" style="padding: 8px min((5px + 0.3vw), (5px + 0.8vw)); display: inline-block;"
-    href="index.html"><img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo"
-      style="height: 2em;"></a>
-  <div class="flexer" id="menuitems">
-    <a class="topnavitem" href="https://google.com">Documents</a>
-    <a class="topnavitem" href="https://github.com" target="_blank">Forms</a>
-    <a class="topnavitem" href="leadership.html" target="_blank">Leadership</a>
-    <a class="topnavitem" href="feedback.html" target="_blank" class="splitright">Feedback</a>
+  <!-- nav bar -->
+  <div class="topnav" id="myTopnav">
+    <a class="activepage logo" style="padding: 8px min((5px + 0.3vh), (5px + 0.8vw)); display: inline-block;"
+      href="index.html"><img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo"
+        style="height: 2em;"></a>
+    <div class="flexer" id="menuitems">
+      <a class="topnavitem" href="documents.html">Documents</a>
+      <a class="topnavitem" href="forms.html" target="_blank">Forms</a>
+      <a class="topnavitem" href="leadership.html" target="_blank">Leadership</a>
+    </div>
+    <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
-  <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 
 
-<body>
-  <main>
-    <p class="title center" style="max-width: 100%; font-size: 60pt; font-weight: 700;">
-      <span style="color: var(--text-primary)">
-        &lt;
-      </span>
-      CSHS
-      <span style="color: var(--text-primary)">
-        >
-      </span>
-      <!-- <span style="color: var(--text-thirdendary)">
-          of Myers Park UWU
-        </span> -->
-
-      <!-- </p>
-        <b>
-          About Us
-        </b>
-      </p>! -->
-      <!-- <div class="container" id="ex1">
-
-        <div style="background-color: var(--bg-secondary); box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);" class="box" id="ex1-layer"> -->
+  <body>
+    <main>
+      <p class="top title center" style="max-width: 100%; font-size: 60pt; font-weight: 700;">
+        <span style="color: var(--text-primary)">
+          &lt;
+        </span>
+        CSHS
+        <span style="color: var(--text-primary)">
+          >
+        </span>
       <div class="center aboutus box">
         <div class="split">
           <div class="splitsection">
-            <p class="title">
+            <p class="title" style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
               <b>
                 About Us
               </b>
             </p>
             <p class="center">
-              We are The Computer Science Honor Society Club at Myers Park.
+              We are The Computer Science Honor Society Club at Myers Park High School. Our goal is to teach students
+              invaluable information about the subject, prepare students for their future in a digital world, and fw mac
+              n cheese balls from Top Golf
+
             </p>
           </div>
 
@@ -70,38 +62,12 @@
 
         </div>
       </div>
-      <!-- </div>
-      </div> -->
 
-      <!-- <div id="ex1" class="container">
-        <div id="ex1-layer" class="box"><img src="assets/asset.jpg" style="width: 100%; height: 100%;"></div>
-      </div> -->
 
       <br>
       <br>
       <br>
-      <!-- 
-      <div class="center split">
-        <div style="width: 50%; left: 0px">
-          <p class="title center">
-            <b>
-              About Us
-            </b>
-          </p>
-          <p class="center">
-            What the club does, how often we meet, etc
-            <br>
-            Maybe add photos with everything as well?
-          </p>
-        </div>
-        <img src="assets\asset.jpg" style="width: 50%; right: 0px; height: 200px">
-      </div> -->
 
-      <!--<p class="center title">
-        <b>
-           Calender
-        </b>
-      </p>-->
       <div class="center calendar textbox">
         <iframe src="https://embed.styledcalendar.com/#JyvphqfW1psz2SuS9I3K" title="CSHS Calendar"
           class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
@@ -111,9 +77,12 @@
       <br>
       <br>
       <br>
-  </main>
+    </main>
 
-  <div class="footer-container splode">
+    <script src="index.js"></script>
+    <script src="tilt.js"></script>
+  </body>
+  <footer class="footer-container splode">
     <div class="footer">
       <div class="footer-heading footer-1">
         <h2>Contact Us</h2>
@@ -123,18 +92,17 @@
         <a href="mailto:secretary@myersparkcshs.club">Secretary Email</a>
         <a href="mailto:treasurer@myersparkcshs.club">Treasurer Email</a>
         <a href="mailto:webmaster@myersparkcshs.club"> Webmaster Email</a>
-        <a href="forms.html">Join</a>
+
       </div>
       <div class="footer-heading footer-2">
         <h2>Socials</h2>
         <a href="https://instagram.com/myerspark_cshs">Instagram</a>
         <a href="#">YouTube</a>
         <a href="#">GitHub</a>
+        <a href="forms.html">Join</a>
       </div>
     </div>
-  </div>
+  </footer>
+</div>
 
-  <script src="index.js"></script>
-  <script src="tilt.js"></script>
-</body>
 </html>
