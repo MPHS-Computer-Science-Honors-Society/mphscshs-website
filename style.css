@@ -226,10 +226,12 @@ p {
     overflow: hidden;
     margin: 0;
     padding: 0px 0px;
-    background-color: var(--bg-secondary);
+    background-color: rgba(24, 39, 56, 0.5);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 1px 12px rgba(37, 37, 37, 0.25);
     position: fixed;
+    
     top: 0;
     width: 100vw;
     height: auto;
