@@ -62,3 +62,24 @@ function attendenceForm(form) {
     document.getElementById("attendence-form").height = 700;
   }
 }
+
+function documents(doc) {
+  console.log("lastForm: " + lastForm);
+  console.log("doc: " + doc);console.log
+  console.log(document.getElementById("document").src);
+  if (document.getElementById("document").src.includes("google") && lastForm == doc) {
+    document.getElementById("document").height = 50;
+    document.getElementById("document").src = "";
+  } else {
+    if (doc == 1) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/1ioduJc5vhMFwheAq6y6N2dIqTfv9kAuk2i0Svz3QRMg/pub?embedded=true"
+      lastForm = doc;
+    } else if (doc == 2) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/1IDod10EVljmHSWMkDLdGEZ0cAZSGirhqtqxdzuMEB5M/pub?embedded=true"
+      lastForm = doc;
+    } else {
+      exit();
+    }
+    document.getElementById("document").height = 700;
+  }
+}

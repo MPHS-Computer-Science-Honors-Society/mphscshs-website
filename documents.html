@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- the container part is so the footer doesn't get messed up by shorter content -->
 <div id="container">
 
   <head>
@@ -16,93 +15,71 @@
 
   <!-- nav bar -->
   <div class="topnav" id="myTopnav">
-    <a class="logo" style="padding: 8px min((5px + 0.3vh), (5px + 0.8vw)); display: inline-block;"
+    <a class="activepage logo" style="padding: 5px min((4px), (5px + 0.8vw)); display: inline-block;"
       href="index.html"><img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo"
         style="height: 2em;"></a>
     <div class="flexer" id="menuitems">
-      <a class="activepage topnavitem" href="documents.html">Documents</a>
+      <a class="topnavitem" href="documents.html">Documents</a>
       <a class="topnavitem" href="forms.html" target="_blank">Forms</a>
-      <a class="topnavitem" href="leadership.html" target="_blank">Leadership</a>
+      <a class="topnavitem" href="leadership.html" target="_blank" class="splitright">Leadership</a>
+    </div>
+    <div class="right-flex" id="menuitems">
+      <a class="topnavicon" href="https://www.instagram.com/myerspark_cshs/" target="_blank"><img src="assets\logos\Instagram Logo (2).png" style="height: 2em;"></a>
+      <a class="topnavicon" href="https://github.com/MPHS-Computer-Science-Honors-Society" target="_blank"><img src="assets\logos\25231.png" style="height: 2em;"></a>
+      <a class="topnavicon" href="https://www.remind.com/join/mphs-cshs" target="_blank"><img src="assets\logos\Remind-Symbol.png" style="height: 2em"></a>
     </div>
     <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 
-
   <body>
     <main>
-      <p class="top title center" style="max-width: 100%; font-size: 60pt; font-weight: 700;">
-        Documents
+      <p class="center title">
+        <span style="color: var(--text-primary)">
+          &lt;
+        </span>
+        Forms
+        <span style="color: var(--text-primary)">
+          >
+        </span>
       </p>
-      
+
       <div class="center aboutus box">
-        <div class="split">
-          <div class="splitsection">
-            <p class="title">
-              <b>
-                Guides
-              </b>
-            </p>
-            <p class="center">
-              LINKS LINKS LINKS
-            </p>
-          </div>
-
-          <div class="splitsection">
-            <img src="assets/asset.jpg">
-          </div>
-
-        </div>
+        <p class="title">
+          <b>
+            Documents
+          </b>
+        </p>
+        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true" width="100%" max-width="900px" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        <ul style="text-align: center;">
+          <button class="center formbutton" type="button" onclick="documents(1)">9/27/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(2)">10/11/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(3)">10/25/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(4)">11/8/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(5)">11/22/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(6)">12/6/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(7)">1/10/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(8)">1/31/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(9)">2/14/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(10)">2/28/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(11)">3/7/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(12)">3/14/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(13)">3/28/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(14)">4/11/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(15)">4/25/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(16)">5/9/2025</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(17)">5/23/2025</button>
+        </ul>
+        <iframe id="document" src="" width="700px" max-width="900px" height="50px" frameborder="0"
+          marginheight="0" marginwidth="0" class="center">Loading…</iframe>
       </div>
-      <!-- </div>
-      </div> -->
-
-      <!-- <div id="ex1" class="container">
-        <div id="ex1-layer" class="box"><img src="assets/asset.jpg" style="width: 100%; height: 100%;"></div>
-      </div> -->
-
-      <br>
-      <br>
-      <br>
-      <!-- 
-      <div class="center split">
-        <div style="width: 50%; left: 0px">
-          <p class="title center">
-            <b>
-              About Us
-            </b>
-          </p>
-          <p class="center">
-            What the club does, how often we meet, etc
-            <br>
-            Maybe add photos with everything as well?
-          </p>
-        </div>
-        <img src="assets\asset.jpg" style="width: 50%; right: 0px; height: 200px">
-      </div> -->
-
-      <!--<p class="center title">
-        <b>
-           Calender
-        </b>
-      </p>-->
-      <div class="center calendar textbox">
-        <iframe src="https://embed.styledcalendar.com/#JyvphqfW1psz2SuS9I3K" title="CSHS Calendar"
-          class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
-        <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
-      </div>
-
-      <br>
-      <br>
-      <br>
     </main>
 
     <script src="index.js"></script>
     <script src="tilt.js"></script>
   </body>
-
-  <footer class="footer-container splode">
+  <footer class="footer-container splode doc-footer">
     <div class="footer">
       <div class="footer-heading footer-1">
         <h2>Contact Us</h2>

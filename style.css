@@ -11,7 +11,7 @@
     --text-secondary: #2cac6a;
     --text-thirdendary: rgb(169, 255, 208);
     --tempo: rgba(255, 255, 255, 0.5);
-    --splode-power: 1.85;
+    --splode-power: 1.8;
     --font-primary: "Inter";
     --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
@@ -76,8 +76,8 @@ p {
     max-width: 100%;
     font-size: min(60pt, 10vw);
     font-weight: 700;
-    padding-top: 0.5vw;
-    padding-bottom: 1vh;
+    padding-top: 0.5dvw;
+    padding-bottom: 0.4dvw;
 }
 
 .title span {
@@ -92,10 +92,6 @@ p {
 
 .bottom {
     margin-bottom: 40px;
-}
-
-.top {
-    margin-top: 4hv;
 }
 
 /* navigation bar stuff here */
@@ -251,7 +247,16 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
 
+.right-flex {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 92%;
+    transform: translateX(-20%); */
+    float: right;
 }
 
 .topnav a {
@@ -271,6 +276,11 @@ p {
 
 .topnavitem {
     padding: min(max(14px, (5px + 0.5vw)), 24px) min(16px + 1rem, (5px + 0.8vw + 1rem));
+}
+
+.topnavicon {
+    /* padding: 0.5em min(max(0px, (0px + 0.5vw)), 24px) min(1rem, (5px + 2vw)); */
+    padding: 0.28em 0.5em 0.12em 0.5em;
 }
 
 .topnav a:hover {
@@ -358,7 +368,7 @@ p {
 
 .footer-heading a:hover {
     color: rgb(96, 240, 137);
-    transition-duration: .3 ease-out;
+    transition-duration: 3 ease-out;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -480,7 +490,7 @@ p {
 }
 
 .splode:hover {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 0 10px 10px rgb(44, 172, 106),
         0 0 30px 50px rgb(0, 151, 114),
         0 0 50px 100px rgb(0, 131, 118),
@@ -491,7 +501,7 @@ p {
 }
 
 .splode:active {
-    border-radius: 10%;
+    /* border-radius: 10%; */
     transition: 0.5s;
 
     box-shadow: 0 0 10px 10px rgb(44, 172, 106),
