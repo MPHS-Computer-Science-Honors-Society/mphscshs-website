@@ -104,6 +104,7 @@ p {
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 1px 12px rgba(7, 7, 7, 0.55);
     padding: 20px 20px;
+    margin-bottom: 3.5vh;
 }
 
 .aboutus {
@@ -119,7 +120,7 @@ p {
 
 .calendar {
     /* margin-top: 5rem; */
-    max-width: 800px;
+    max-width: min(90%, 1800px);
     background-color: var(--bg-secondary);
     width: 80%;
     /* height: 100%; */
@@ -476,6 +477,7 @@ p {
     border-radius: 20px 20px;
     padding: 20px;
     margin-bottom: 3.5vh;
+    z-index: 300;
 }
 
 .splode {
@@ -553,6 +555,10 @@ p {
         0 0 calc(var(--splode-power) * 60px) calc(var(--splode-power) * 100px) rgb(0, 70, 92),
         0 0 calc(var(--splode-power) * 200px) calc(var(--splode-power) * 140px) rgb(15, 51, 73);
 } */
+
+.leader {
+    line-height: 4.5vh;
+}
 
 @keyframes example {
     0% {
