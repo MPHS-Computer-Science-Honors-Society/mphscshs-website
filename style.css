@@ -76,7 +76,7 @@ p {
     max-width: 100%;
     font-size: min(60pt, 10vw);
     font-weight: 700;
-    padding-top: 0.5dvw;
+    padding-top: 0.2vw;
     padding-bottom: 0.4dvw;
 }
 
@@ -100,8 +100,6 @@ p {
     background-color: var(--bg-secondary);
     max-width: 1300px;
     border-radius: 8px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 1px 12px rgba(7, 7, 7, 0.55);
     padding: 20px 20px;
     margin-bottom: 3.5vh;
@@ -114,20 +112,22 @@ p {
     width: 100%;
     /* height: 30rem; */
     padding: 20px 20px;
-    background-color: var(--bg-secondary);
     box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);
 }
 
 .calendar {
-    /* margin-top: 5rem; */
+    margin-top: 5rem;
     max-width: min(90%, 1800px);
     background-color: var(--bg-secondary);
-    width: 80%;
-    /* height: 100%; */
-    /* padding: 20px 20px; */
+    width: 800%;
+    height: 3000px;
+    height: 100%;
+    padding: 20px 20px;
+} 
+
+.leaderbox {
+    margin-top: 1.5vh;
 }
-
-
 
 .split {
     /* max-width: 90%; */
@@ -220,7 +220,8 @@ p {
 
 .center p span {
     font-size: 50;
-    color: var(--text-thirdendary);
+    color: var(--text-secondary);
+    font-weight: 700;
 }
 
 .topnav {
@@ -250,6 +251,13 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.divider {
+    background-color: var(--bg-secondary);
+    box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);
+    position: relative;
+    width: 100%;
 }
 
 .right-flex {
@@ -300,20 +308,6 @@ p {
 .topnav a:active {
     background-color: rgb(47, 47, 47);
     transition-duration: 0.1s;
-}
-
-.topnav a.activepage:hover {
-    /* background-color: #22353c;
-    transition-duration: 0.4s; */
-}
-
-.topnav a.activepage:active {
-    /* background-color: #2d454e;
-    transition-duration: 0.1s; */
-}
-
-.topnav a.activepage {
-    /* background-color: #152334; */
 }
 
 .topnav .icon {

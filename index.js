@@ -83,3 +83,28 @@ function documents(doc) {
     document.getElementById("document").height = 700;
   }
 }
+
+
+function randomColor() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    
+    document.getElementById("goodColor").style.backgroundColor = rgbToHex(r, g, b);
+
+    alecRotate();
+}
+
+function alecRotate() {
+  var rotation = Math.random() * 360
+  document.getElementById("alec").style.transform = "rotate(" + rotation + "deg ";
+}
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}

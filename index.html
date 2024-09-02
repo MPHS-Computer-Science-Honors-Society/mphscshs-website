@@ -21,10 +21,9 @@
         style="height: 2em;"></a>
     <div class="flexer" id="menuitems">
       <a class="topnavitem" href="attendence.html">Attendence Recovery</a>
-      <a class="topnavitem" href="meetinginfo.html">Documents</a>
       <a class="topnavitem" href="forms.html">Forms</a>
       <a class="topnavitem" href="leadership.html">Leadership</a>
-      <a class="topnavitem" href="hallOfFame.html">Hall of Fame</a>
+      <a class="topnavitem" href="meetinginfo.html">Metting Info</a>
     </div>
     <div class="right-flex" id="menuitems">
       <a class="topnavicon" href="https://www.instagram.com/myerspark_cshs/" target="_blank"><img
@@ -50,7 +49,7 @@
         <span style="color: var(--text-primary)">
           >
         </span>
-        <div class="center aboutus box">
+        <div onmousemove=randomColor() id="goodColor" class="center aboutus box" style="transition-duration: 0.5s;">
           <div class="split">
             <div class="splitsection">
               <p class="title" style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
@@ -59,32 +58,36 @@
                 </b>
               </p>
               <p class="center">
-                We are the MPHS Computer Science Honor Society. We focus on exploring the many facets of Computer Science and giving our members the space and tools to learn both independently and collaboratively.
+                We are the Myers Park High School <span>Computer Science Honor Society</span> (MPHS <span>CSHS</span>). Our goal is to educate, engage, and connect peers 
+                who share an enthusiasm for computer science through use of innovative projects, coding competitions, and guest lectures.
+                Members of the MPHS <span>CSHS</span> will recieve a cord and pin at graduation and a club t-shirt to wear during the year.
+                <br><br>
+                To be eligible to join <span>CSHS</span>, you must have at least one of the following requirements: be currently enrolled in a computer science class and maintain above a 70%,
+                 completion of a computer science class with an 80% or higher, or have proof of completion of a computer science course with an 80% or higher.
+                
+                <br><br>
+                Every year, we aim to build and improve our club to become the best club here at Myers Park, and this year is no exception. We hope to see you in <span>CSHS</span> this year!
+                <br><br>
               </p>
             </div>
-
             <div class="splitsection">
-              <img src="assets/leaders/alec.jpg">
+              <img id="alec" src="assets/leaders/alec.jpg" style="height: 730px;">
             </div>
 
           </div>
-        </div>
+          </div>
+          <br>
 
-        <br>
-        <br>
 
-        <div class="center textbox box calendar" style="z-index: 999; position: relative;">
+        <div class="center textbox box" style="z-index: 999; position: relative;">
           <iframe src="https://embed.styledcalendar.com/#JyvphqfW1psz2SuS9I3K" title="CSHS Calendar"
-            class="styled-calendar-container" style="width: 100%; border: none;"
+            class="styled-calendar-container" style="width: 100%; height: 10000px; border: 0px;"
             data-cy="calendar-embed-iframe"></iframe>
           <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
         </div>
 
         <br>
     </main>
-
-    <script src="index.js"></script>
-    <script src="tilt.js"></script>
   </body>
   <footer class="footer-container splode">
     <div class="footer">
@@ -100,12 +103,15 @@
       <div class="footer-heading footer-2">
         <h2>Socials</h2>
         <a href="https://instagram.com/myerspark_cshs">Instagram</a>
-        <a href="#">Remind</a>
-        <a href="#">GitHub</a>
+        <a href="https://www.remind.com/join/mphs-cshs">Remind</a>
+        <a href="https://github.com/MPHS-Computer-Science-Honors-Society">GitHub</a>
         <a href="forms.html">Join</a>
       </div>
     </div>
   </footer>
 </div>
+
+<script src="index.js"></script>
+<script src="tilt.js"></script>
 
 </html>
