@@ -1,4 +1,3 @@
-
 const button = document.getElementById("alecButton");
 let clickCount = 0;
 console.log(button);
