@@ -12,6 +12,7 @@
     --text-thirdendary: rgb(169, 255, 208);
     --tempo: rgba(255, 255, 255, 0.5);
     --splode-power: 1.7;
+    --super-splode-power: 17;
     --font-primary: "Inter";
     --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
@@ -167,10 +168,6 @@ p {
     color: var(--text-secondary);
     max-width: 100%;
     font-weight: 550;
-}
-
-.split div.splitsection a {
-    
 }
 
 .code {
@@ -558,6 +555,22 @@ p {
         0 0 calc(var(--splode-power) * 60px) calc(var(--splode-power) * 100px) rgb(0, 70, 92),
         0 0 calc(var(--splode-power) * 200px) calc(var(--splode-power) * 140px) rgb(15, 51, 73);
 } */
+
+.sploder {
+    box-shadow: 0 0 5px 5px rgb(44, 172, 106),
+        0 0 calc(var(--super-splode-power) * 4px) calc(var(--super-splode-power) * 6px) rgb(0, 151, 114),
+        0 0 calc(var(--super-splode-power) * 8px) calc(var(--super-splode-power) * 7px) rgb(0, 131, 118),
+        0 0 calc(var(--super-splode-power) * 11px) calc(var(--super-splode-power) * 22px) rgb(0, 110, 115),
+        0 0 calc(var(--super-splode-power) * 16px) calc(var(--super-splode-power) * 32px) rgb(0, 90, 107),
+        0 0 calc(var(--super-splode-power) * 22px) calc(var(--super-splode-power) * 44px) rgb(0, 70, 92),
+        0 0 calc(var(--super-splode-power) * 40px) calc(var(--super-splode-power) * 60px) rgb(15, 51, 73);
+    transition: 2s;
+    transition-timing-function: ease-out;
+    position: relative;
+
+
+    z-index: 0 !important;
+}
 
 .leader {
     line-height: 4.5vh;
