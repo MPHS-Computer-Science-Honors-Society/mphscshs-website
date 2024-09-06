@@ -11,7 +11,7 @@
     --text-secondary: #2cac6a;
     --text-thirdendary: rgb(169, 255, 208);
     --tempo: rgba(255, 255, 255, 0.5);
-    --splode-power: 1.8;
+    --splode-power: 1.7;
     --font-primary: "Inter";
     --font-secondary: "Barlow";
     --font-code: "JetBrains+Mono";
@@ -78,6 +78,11 @@ p {
     font-weight: 700;
     padding-top: 0.2vw;
     padding-bottom: 0.4dvw;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
 }
 
 .title span {
@@ -164,13 +169,17 @@ p {
     font-weight: 550;
 }
 
+.split div.splitsection a {
+    
+}
+
 .code {
     font-family: "Space Mono", monospace;
 }
 
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
     .split div {
         /* width: 100%; */
         float: none;
@@ -418,7 +427,7 @@ p {
 }
 
 /* The "responsive" class is added to  the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width:750px) {
+@media screen and (max-width:1000px) {
     .topnav.responsive {
         position: relative;
         max-height: 100000px;
