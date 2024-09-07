@@ -11,7 +11,7 @@
     --text-secondary: #2cac6a;
     --text-thirdendary: rgb(169, 255, 208);
     --tempo: rgba(255, 255, 255, 0.5);
-    --splode-power: 1.7;
+    --splode-power: 1;
     --super-splode-power: 17;
     --font-primary: "Inter";
     --font-secondary: "Barlow";
@@ -525,7 +525,7 @@ p {
         0 0 5px 0px rgb(21, 34, 51),
         0 0 5px 0px rgb(21, 34, 51),
         0 0 5px 0px rgb(21, 34, 51);
-    transition: 2s;
+    transition: 1s;
     transition-timing-function: ease-out;
     position: relative;
 

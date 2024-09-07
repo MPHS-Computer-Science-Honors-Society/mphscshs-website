@@ -85,19 +85,17 @@ function documents(doc) {
 }
 
 
-function randomColor() {
+function randomColor(div) {
     var r = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
     var b = Math.floor(Math.random() * 256);
     
-    document.getElementById("goodColor").style.backgroundColor = rgbToHex(r, g, b);
-
-    alecRotate();
+    div.style.backgroundColor = rgbToHex(r, g, b);
 }
 
-function alecRotate() {
+function alecRotate(alec) {
   var rotation = Math.random() * 360
-  document.getElementById("alec").style.transform = "rotate(" + rotation + "deg ";
+  alec.style.transform = "rotate(" + rotation + "deg ";
 }
 
 function componentToHex(c) {
