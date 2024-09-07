@@ -5,7 +5,7 @@ button.addEventListener('click', () => {
     clickCount++;
     console.log(clickCount);
 
-    if (clickCount === 15) {
+    if (clickCount == 15) {
         button.href = "secret.html";
     }
 });
@@ -16,28 +16,38 @@ var splodeCountdown = 15;
 exploder.addEventListener('click', () => {
     splodeCountdown--;
 
-    if (splodeCountdown === 0)  {
+    if (splodeCountdown == 0)  {
         exploder.src = "assets\\leaders\\jakob-dies.gif";
     }
 });
 
 const shade = document.getElementById("shadeEffect");
-var shadeEffectCountdown = 8;
-var shadeEffectTrigger = false;
+var shadeEffectCountdown = 15;
+
+var currentScale = 1;
+var shadeInterval;
 
 shade.addEventListener('click', () => {
     shadeEffectCountdown--;
-    console.log(shadeEffectCountdown);
+    if (shadeEffectCountdown == 0) {
+        shade.src = "assets\\leaders\\Shade Burgess.png"
+        shadeInterval = setInterval(scaleShade, 33);
+    }
 
-    if (shadeEffectCountdown === 0) {
-        console.log('gets here');
-        shadeEffectTrigger = true;
+    if (currentScale > 5) {
+        shade.style.transform = "scale(1, 1)";
+        clearInterval(shadeInterval)
+        shadeEffectCountdown = 15;
+        currentScale = 1;
     }
 });
 
-if (shadeEffectTrigger) {
-    console.log('gets here again');
-    let x = event.clientX;
-    let y = event.clientY;
-    shade.style.objectPosition = x + "px " + y + "px";
+function scaleShade() {
+    console.log("function 2");
+
+    currentScale += .0333;
+    shade.style.transform = "scale(" + currentScale + ", 1)";
+    if (currentScale == 30) {
+        clearInterval(shadeInterval)
+    }
 }
