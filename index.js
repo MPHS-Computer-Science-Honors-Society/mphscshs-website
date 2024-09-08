@@ -49,18 +49,18 @@ function attendenceForm(form) {
     // console.log(document.getElementById("attendence-form").src)
     document.getElementById("attendence-form").height = 50;
     document.getElementById("attendence-form").src = "";
-  } else {
+  } /*else {
     if (form == 1) {
       document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true"
       lastForm = form;
     } else if (form == 2) {
       document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScQ1a3tEsdzoY0e2uMP2xa7jrDoWPFdJAOFlbRWjcjiMpA9KA/viewform?embedded=true"
       lastForm = form;
-    } else {
+    }  else {
       exit();
     }
     document.getElementById("attendence-form").height = 700;
-  }
+  }*/
 }
 
 function documents(doc) {
@@ -70,7 +70,7 @@ function documents(doc) {
   if (document.getElementById("document").src.includes("google") && lastForm == doc) {
     document.getElementById("document").height = 50;
     document.getElementById("document").src = "";
-  } else {
+  } /*else {
     if (doc == 1) {
       document.getElementById("document").src = "https://docs.google.com/document/d/1ioduJc5vhMFwheAq6y6N2dIqTfv9kAuk2i0Svz3QRMg/pub?embedded=true"
       lastForm = doc;
@@ -81,7 +81,12 @@ function documents(doc) {
       exit();
     }
     document.getElementById("document").height = 700;
-  }
+  }*/
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+  alert("Copied To Clipboard: " + text);
 }
 
 

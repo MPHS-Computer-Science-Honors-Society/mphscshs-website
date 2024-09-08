@@ -56,8 +56,7 @@
           </b>
         </p>
         <ul style="text-align: center; padding: 0;">
-          <button class="center formbutton" type="button" onclick="documents(1)"
-            style="border-radius: 8px;">9/27/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="documents(1)">9/27/2024</button>
           <button class="center formbutton grayed" type="button" onclick="documents(2)">10/11/2024</button>
           <button class="center formbutton grayed" type="button" onclick="documents(3)">10/25/2024</button>
           <button class="center formbutton grayed" type="button" onclick="documents(4)">11/8/2024</button>
@@ -87,7 +86,7 @@
         </p>
         <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true" width="100%" max-width="900px" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
         <ul style="text-align: center; padding: 0;">
-          <button class="center formbutton" type="button" onclick="attendenceForm(1)">9/27/2024</button>
+          <button class="center formbutton grayed" type="button" onclick="attendenceForm(1)">9/27/2024</button>
           <button class="center formbutton grayed" type="button" onclick="attendenceForm(2)">10/11/2024</button>
           <button class="center formbutton grayed" type="button" onclick="attendenceForm(3)">10/25/2024</button>
           <button class="center formbutton grayed" type="button" onclick="attendenceForm(4)">11/8/2024</button>
@@ -118,12 +117,12 @@
     <div class="footer">
       <div class="footer-heading footer-1">
         <h2>Contact Us</h2>
-        <a href="mailto:leadership@myersparkcshs.club">CSHS Email</a>
-        <a href="mailto:president@myersparkcshs.club">President Email</a>
-        <a href="mailto:vicepresedent@myersparkcshs.club">Vice President Email</a>
-        <a href="mailto:secretary@myersparkcshs.club">Secretary Email</a>
-        <a href="mailto:treasurer@myersparkcshs.club">Treasurer Email</a>
-        <a href="mailto:webmaster@myersparkcshs.club"> Webmaster Email</a>
+        <a onclick="copyToClipboard('leadership@myersparkcshs.club')" href="mailto:leadership@myersparkcshs.club" target="_blank">CSHS Email</a>
+        <a onclick="copyToClipboard('president@myersparkcshs.club')" href="mailto:president@myersparkcshs.club" target="_blank">President Email</a>
+        <a onclick="copyToClipboard('vicepresedent@myersparkcshs.club')" href="mailto:vicepresedent@myersparkcshs.club" target="_blank">Vice President Email</a>
+        <a onclick="copyToClipboard('secretary@myersparkcshs.club')" href="mailto:secretary@myersparkcshs.club" target="_blank">Secretary Email</a>
+        <a onclick="copyToClipboard('treasurer@myersparkcshs.club')" href="mailto:treasurer@myersparkcshs.club" target="_blank">Treasurer Email</a>
+        <a onclick="copyToClipboard('webmaster@myersparkcshs.club')" href="mailto:webmaster@myersparkcshs.club" target="_blank"> Webmaster Email</a>
       </div>
       <div class="footer-heading footer-2">
         <h2>Socials</h2>
@@ -135,5 +134,7 @@
     </div>
   </footer>
 </div>
+
+<script src="index.js"></script>
 
 </html>
