@@ -39,7 +39,7 @@
 
   <body>
     <main>
-      <p class="center title">
+      <p class="center title mobile">
         <span style="color: var(--text-primary)">
           &lt;
         </span>
@@ -49,7 +49,11 @@
         </span>
       </p>
 
-      <div class="center aboutus box" style="position: relative; z-index: 999;">
+      <div class="center aboutus box">
+        <p class="title">Closed</p>
+      </div>
+
+      <!-- <div class="center aboutus box" style="position: relative; z-index: 999;">
         <p class="title">
           <b>
             Documents
@@ -78,13 +82,12 @@
           marginwidth="0" class="center">Loading…</iframe>
       </div>
 
-      <div class="center aboutus box" style="position: relative; z-index: 999;">
+      <div class="center aboutus box" style="position: relative; z-index: 999;" >
         <p class="title">
           <b>
             Forms
           </b>
         </p>
-        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOwOSN1cMb-qF24Q_iF2RSFK0oEysuKhhWnLXEcrMWhdGC2w/viewform?embedded=true" width="100%" max-width="900px" height="800px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
         <ul style="text-align: center; padding: 0;">
           <button class="center formbutton grayed" type="button" onclick="attendenceForm(1)">9/27/2024</button>
           <button class="center formbutton grayed" type="button" onclick="attendenceForm(2)">10/11/2024</button>
@@ -106,13 +109,15 @@
         </ul>
         <iframe id="attendence-form" src="" width="700px" max-width="900px" height="50px" frameborder="0"
           marginheight="0" marginwidth="0" class="center">Loading…</iframe>
-      </div>
+      </div> -->
 
     </main>
 
     <script src="index.js"></script>
     <script src="tilt.js"></script>
+    
   </body>
+  
   <footer class="footer-container splode">
     <div class="footer">
       <div class="footer-heading footer-1">
@@ -133,8 +138,5 @@
       </div>
     </div>
   </footer>
-</div>
-
-<script src="index.js"></script>
-
+  </div>
 </html>

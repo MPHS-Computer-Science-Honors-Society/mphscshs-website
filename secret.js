@@ -51,3 +51,18 @@ function scaleShade() {
         clearInterval(shadeInterval)
     }
 }
+
+var byronEffectCountdown = 15;
+var rotateByron;
+
+byron.addEventListener('click', () => {
+    byronEffectCountdown--;
+    if (byronEffectCountdown === 0) {
+        byronInterval = setInterval(rotateByron, 5);
+    }
+})
+
+function rotateByron() {
+    var rotation = Math.random() * 360
+    document.getElementById("byron").style.transform = "rotate(" + rotation + "deg)";
+}

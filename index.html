@@ -6,9 +6,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Myers Park High School Computer Science Honor Society website MPHS CSHS myersparkcshs" />
+    <meta name="keywords" content="CSHS, MPHS CSHS, computer science honor society, myers park high school, MPHS, club" />
+    <meta name="author" content="CSHS Leadership" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="Myers Park Computer Science Honor Society Website" />
     <link rel="icon" type="image/x-icon" href="assets/icons/CSHS_Website_Logo.png" />
     <title>
-      Home - CSHS
+      CSHS Homepage
     </title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -25,13 +30,13 @@
       <a class="topnavitem" href="leadership.html">Leadership</a>
       <a class="topnavitem" href="meetinginfo.html">Metting Info</a>
     </div>
-    <div class="right-flex" id="menuitems">
+    <div class="right-flex">
       <a class="topnavicon" href="https://www.instagram.com/myerspark_cshs/" target="_blank"><img
-          src="assets\logos\Instagram Logo (2).png" style="height: 2em;"></a>
+        src="assets\logos\Instagram Logo (2).png" style="height: 2em;"></a>
       <a class="topnavicon" href="https://github.com/MPHS-Computer-Science-Honors-Society" target="_blank"><img
-          src="assets\logos\25231.png" style="height: 2em;"></a>
+        src="assets\logos\25231.png" style="height: 2em;"></a>
       <a class="topnavicon" href="https://www.remind.com/join/mphs-cshs" target="_blank"><img
-          src="assets\logos\Remind-Symbol.png" style="height: 2em"></a>
+        src="assets\logos\Remind-Symbol.png" style="height: 2em"></a>
     </div>
     <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
       <i class="fa fa-bars"></i>
@@ -49,7 +54,7 @@
         <span style="color: var(--text-primary)">
           >
         </span>
-        <div onmousemove=randomColor() id="goodColor" class="center aboutus box" style="transition-duration: 0.5s;">
+        <div class="center aboutus box">
           <div class="split">
             <div class="splitsection">
               <p class="title" style="padding-top: 0px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px;">
@@ -71,17 +76,55 @@
               </p>
             </div>
             <div class="splitsection">
-              <img id="alec" src="" style="height: 730px;">
+              <img src="assets\leaders\CSHS Leaders.png">
             </div>
 
           </div>
           </div>
-          <br>
+
+        <!-- <div class="center aboutus box" style="position: relative; z-index: 999;">
+          <p class="title" style="font-weight: 600; padding-top: 0px; padding-bottom: 0px; margin-top: 0; margin-bottom: 0;">
+            About Coding Club
+          </p>
+          <p class="center" style="max-width: 1200px;">
+            We are the Myers Park Honor Society Coding Club! Our goal is to provide an opportunity for people to dive into their interest in Computer Science without any experience.
+            We strive to give students a safe place to have fun and create connections while building the subject of Computer Science at Myers Park High School.
+            <br><br>
+            This is our first year here at Myers Park, but all of our leaders have been working hard to make sure it is a great year for everyone in the club. You can learn more about the Coding Club in the button below.
+            <br><br>
+            <button class="center formbutton" href="codingclub.html" style="height: 60px; font-size: 30px; font-weight: 500;">Learn More</button>
+          </p>
+        </div> -->
+
+        <div class="center aboutus box slidebox">
+          <p class="title center">Club News</p>
+          <div class="slider">
+            <div class="item">
+                <h1>CSHS Rock (09/04/24)</h1>
+                <p>Go visit the club rock between the Math building and the front office! Thanks to all of the volunteers who helped make it!</p>
+                <img src="assets\news\IMG_1913.jpg"></img>
+                <img src="assets\news\IMG_1918.jpg"></img>
+            </div>
+            <div class="item">
+              <h1>Coding Club Intrest Meeting (09/19/24)</h1>
+              <p>Coding Club intrest meeting comming up on September 19th. We hope to see you there!</p>
+              <img src="assets\news\Untitled (25).png" style="border-radius: 8px;"></img>
+            </div>
+            <div class="item">
+              <h1>CSHS Intrest Meeting (09/20/24)</h1>
+              <p>Computer Science Honor Society intrest meeting comming up on September 20th. We hope to see you there!</p>
+              <img src="assets\news\CSHS Logo.png"></img>
+            </div>
+    
+            <button id="next" style="z-index: 1000;">></button>
+            <button id="prev" style="z-index: 1000;"><</button>
+          </div>
+        </div>
 
 
         <div class="center textbox box" style="z-index: 999; position: relative;">
           <iframe src="https://embed.styledcalendar.com/#JyvphqfW1psz2SuS9I3K" title="CSHS Calendar"
-            class="styled-calendar-container" style="width: 100%; height: 10000px; border: 0px;"
+            class="styled-calendar-container" style="width: 100%; border: 0px;"
             data-cy="calendar-embed-iframe"></iframe>
           <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
         </div>
@@ -102,9 +145,9 @@
       </div>
       <div class="footer-heading footer-2">
         <h2>Socials</h2>
-        <a href="https://instagram.com/myerspark_cshs">Instagram</a>
-        <a href="https://www.remind.com/join/mphs-cshs">Remind</a>
-        <a href="https://github.com/MPHS-Computer-Science-Honors-Society">GitHub</a>
+        <a href="https://instagram.com/myerspark_cshs" target="_blank">Instagram</a>
+        <a href="https://www.remind.com/join/mphs-cshs" target="_blank">Remind</a>
+        <a href="https://github.com/MPHS-Computer-Science-Honors-Society" target="_blank">GitHub</a>
         <a href="forms.html">Join</a>
       </div>
     </div>
@@ -113,5 +156,6 @@
 
 <script src="index.js"></script>
 <script src="tilt.js"></script>
+<script src="carousel.js"></script>
 
 </html>

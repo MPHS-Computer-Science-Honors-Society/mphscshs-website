@@ -100,7 +100,7 @@ function randomColor(div) {
 
 function alecRotate(alec) {
   var rotation = Math.random() * 360
-  alec.style.transform = "rotate(" + rotation + "deg ";
+  alec.style.transform = "rotate(" + rotation + "deg)";
 }
 
 function componentToHex(c) {
