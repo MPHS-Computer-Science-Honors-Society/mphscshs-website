@@ -476,6 +476,8 @@ p {
         font-size: 16px;
         margin: 5px 2px;
     }
+
+
 }
 
 /* end navigation bar stuff */
@@ -635,7 +637,7 @@ body {
 .slider {
     position: relative;
     width: 100%;
-    height: 780px;
+    height: 68vh;
     overflow: hidden;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -645,14 +647,14 @@ body {
     position: absolute;
     width: 600px;
     border-style: solid;
-    height: 700px;
+    height: 60vh;
     text-align: center;
     background-color: var(--bg-primary);
     border-color: var(--text-secondary);
     border-radius: 10px;
     border-width: 3px;
     padding: 30px;
-    transition: 0.5s;
+    transition: 0.5s, opacity 0.2s ease;
     left: calc(50% - 335px);
     top: 0;
     font-family: var(--font-secondary);
@@ -671,7 +673,7 @@ body {
 
 .item img {
     max-width: 600px;
-    max-height: 500px;
+    max-height: 40vh;
 }
 
 #next, #prev {
@@ -694,12 +696,12 @@ body {
 @media (max-width: 900px) {
     .slider {
         width: 87vw;
-        height: 630px;
+        height: 50vh;
     }
 
     .item {
         width: 65vw;
-        height: 550px;
+        height: 50vh;
         left: calc(50% - 37.5vw);
     }
 

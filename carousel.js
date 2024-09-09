@@ -11,22 +11,22 @@ function loadShow(){
     items[active].style.zIndex = 100;
     for(var i = active + 1; i < items.length; i++){
         stt++;
+        if (stt === 1) items[i].style.opacity = 0.6;
+        if (stt === 2) items[i].style.opacity = 0.3;
+        if (stt > 2) items[i].style.opacity = 0;
         items[i].style.transform = `translateX(${150*stt}px) scale(${1 - 0.2*stt})`;
         items[i].style.zIndex = stt;
         items[i].style.filter = 'blur(10px)';
-        if (stt === 1) items[i].style.opacity = 0.8;
-        if (stt === 2) items[i].style.opacity = 0.4;
-        if (stt > 2) items[i].style.opacity = 0;
     }
     stt = 0;
     for(var i = active - 1; i >= 0; i--){
         stt++;
+        if (stt === 1) items[i].style.opacity = 0.6;
+        if (stt === 2) items[i].style.opacity = 0.3;
+        if (stt > 2) items[i].style.opacity = 0;
         items[i].style.transform = `translateX(${-150*stt}px) scale(${1 - 0.2*stt})`;
         items[i].style.zIndex = stt;
         items[i].style.filter = 'blur(10px)';
-        if (stt === 1) items[i].style.opacity = 0.8;
-        if (stt === 2) items[i].style.opacity = 0.4;
-        if (stt > 2) items[i].style.opacity = 0;
     }
 }
 loadShow();
