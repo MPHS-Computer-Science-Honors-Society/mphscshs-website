@@ -596,7 +596,7 @@ p {
 }
 
 .leader {
-    line-height: 8vh;
+    line-height: 0.7em;
 }
 
 @keyframes example {
