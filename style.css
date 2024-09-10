@@ -42,17 +42,7 @@ body {
 }
 
 /* scroll bar settings */
-body::-webkit-scrollbar {
-    width: .5rem;
-}
 
-body::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--text-secondary);
-}
 
 /* main { */
     /*rem is proportional to font-size. Ex: 16 (fontsize) * 5 (rem) = 80 px */
@@ -639,12 +629,17 @@ body {
     width: 100%;
     height: 68vh;
     overflow: hidden;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+    margin: 30px auto;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
+
 .item {
     position: absolute;
+    display: block;
     width: 600px;
     border-style: solid;
     height: 60vh;
@@ -655,9 +650,9 @@ body {
     border-width: 3px;
     padding: 30px;
     transition: 0.5s, opacity 0.2s ease;
-    left: calc(50% - 335px);
     top: 0;
     font-family: var(--font-secondary);
+    overflow: auto;
 }
 
 .item h1 {
@@ -672,8 +667,13 @@ body {
 }
 
 .item img {
-    max-width: 600px;
-    max-height: 40vh;
+    max-width: 570px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #next, #prev {
@@ -685,22 +685,22 @@ body {
     font-size: xxx-large;
     font-family: monospace;
     font-weight: bold;
-    left: 2vw;
+    left: 6vw;
 }
 
 #next {
     left: unset;
-    right: 2vw;
+    right: 6vw;
 }
 
 @media (max-width: 900px) {
     .slider {
-        width: 87vw;
+        width: 100vw;
         height: 50vh;
     }
 
     .item {
-        width: 65vw;
+        width: 59.5vw;
         height: 50vh;
         left: calc(50% - 37.5vw);
     }
@@ -723,4 +723,17 @@ body {
         background-color: var(--text-thirdendary);
         border-radius: 4px;
     }
+}
+
+body::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 2px;
 }
