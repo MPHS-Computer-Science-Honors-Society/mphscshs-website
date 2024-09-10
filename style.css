@@ -42,22 +42,12 @@ body {
 }
 
 /* scroll bar settings */
-body::-webkit-scrollbar {
-    width: .5rem;
-}
 
-body::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--text-secondary);
-}
 
 /* main { */
-    /*rem is proportional to font-size. Ex: 16 (fontsize) * 5 (rem) = 80 px */
-    /* margin-top: 4em; */
-    /* padding: 1rem; */
+/*rem is proportional to font-size. Ex: 16 (fontsize) * 5 (rem) = 80 px */
+/* margin-top: 4em; */
+/* padding: 1rem; */
 /* } */
 
 p {
@@ -131,7 +121,7 @@ p {
     height: 3000px;
     height: 100%;
     padding: 20px 20px;
-} 
+}
 
 .leaderbox {
     margin-top: 1vh;
@@ -177,6 +167,14 @@ p {
 }
 
 
+
+@media screen and (min-width: 901px) {
+    .center.splitsection.mid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 900px) {
     .split div {
@@ -224,19 +222,6 @@ p {
     hr {
         margin-bottom: 20px;
     }
-
-    .footer-heading {
-        margin-right: 0rem;
-        margin: 0px 0px;
-    }
-
-    .footer-2 {
-        margin-right: 0px;
-    }
-
-    .footer {
-        padding-bottom: 0px;
-    }
 }
 
 .center p span {
@@ -254,7 +239,7 @@ p {
     backdrop-filter: blur(20px);
     box-shadow: 0 1px 12px rgba(37, 37, 37, 0.25);
     position: sticky;
-    
+
     top: 0;
     width: auto;
     height: auto;
@@ -289,6 +274,8 @@ p {
     left: 92%;
     transform: translateX(-20%); */
     float: right;
+    display: flex;
+    justify-content: center;
 }
 
 .topnav a {
@@ -313,6 +300,8 @@ p {
 .topnavicon {
     /* padding: 0.5em min(max(0px, (0px + 0.5vw)), 24px) min(1rem, (5px + 2vw)); */
     padding: 0.28em 0.5em 0.12em 0.5em;
+    /* justify-content: center;
+    resize: vertical; */
 }
 
 .topnav a:hover {
@@ -366,7 +355,7 @@ p {
 }
 
 .footer-2 {
-    margin-right: 4rem;
+    margin-right: 0;
 }
 
 .footer-heading h2 {
@@ -387,22 +376,6 @@ p {
 .footer-heading a:hover {
     color: rgb(96, 240, 137);
     transition-duration: 3 ease-out;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width:900px) {
-    .topnav a:not(:first-child) {
-        display: none;
-    }
-
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-
-    .topnav div {
-        display: none;
-    }
 }
 
 /* < !-- HTML !--><button class="button-22" role="button">Button 22</button> */
@@ -432,6 +405,7 @@ p {
     background: #4ae093;
     box-shadow: 0 6px 20px rgba(41, 244, 88, 0.23);
 }
+
 .grayed:hover {
     background-color: rgb(85, 85, 85);
     color: gray;
@@ -440,6 +414,19 @@ p {
 
 /* The "responsive" class is added to  the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width:900px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav div {
+        display: none;
+    }
+
     .topnav.responsive {
         position: sticky;
         max-height: 100000px;
@@ -639,15 +626,21 @@ body {
     width: 100%;
     height: 68vh;
     overflow: hidden;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+    margin: 30px auto;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
+
 .item {
     position: absolute;
+    display: block;
     width: 600px;
     border-style: solid;
-    height: 60vh;
+    height: auto;
+    max-height: 60vh;
     text-align: center;
     background-color: var(--bg-primary);
     border-color: var(--text-secondary);
@@ -655,9 +648,9 @@ body {
     border-width: 3px;
     padding: 30px;
     transition: 0.5s, opacity 0.2s ease;
-    left: calc(50% - 335px);
     top: 0;
     font-family: var(--font-secondary);
+    overflow: auto;
 }
 
 .item h1 {
@@ -672,11 +665,21 @@ body {
 }
 
 .item img {
-    max-width: 600px;
-    max-height: 40vh;
+    max-width: 570px;
 }
 
-#next, #prev {
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidebox {
+    height: auto;
+}
+
+#next,
+#prev {
     position: absolute;
     top: 40%;
     color: var(--text-secondary);
@@ -685,42 +688,165 @@ body {
     font-size: xxx-large;
     font-family: monospace;
     font-weight: bold;
-    left: 2vw;
+    left: 3vw;
 }
 
 #next {
     left: unset;
-    right: 2vw;
+    right: 3vw;
+}
+
+@media (max-width: 600px) {
+    .footer-heading {
+        margin-right: auto;
+        margin: 0px 0px;
+        /* margin-left: auto; */
+        margin-left: 3rem;
+        /* left: 50%; */
+        /* right: 50%; */
+        /* position:absolute; */
+    }
+
+    .footer-2 {
+        margin-right: 0px;
+    }
+
+    .footer {
+        padding-bottom: 0px;
+        flex-flow: column;
+        justify-content: space-around;
+        /* align-items: center; */
+    }
 }
 
 @media (max-width: 900px) {
+    .right-flex {
+        display: none !important;
+    }
+
     .slider {
-        width: 87vw;
-        height: 50vh;
+        width: auto;
+        height: 58vh;
+        /* margin: 0px 0px; */
+        /* padding: none; */
+    }
+
+    .item p {
+        margin: 10px 0;
     }
 
     .item {
-        width: 65vw;
+        width: 70%;
         height: 50vh;
-        left: calc(50% - 37.5vw);
     }
 
     .item h1 {
         font-size: 25pt;
-    } 
+    }
 
     .item p {
-        max-width: 63vw;
+        width: 100%;
         font-size: 16px;
     }
 
     .item img {
-        max-width: 63vw;
+        width: 100%;
         max-height: 35vh;
     }
 
-    #next, #prev {
+    #next,
+    #prev {
         background-color: var(--text-thirdendary);
         border-radius: 4px;
+    }
+
+    :root {
+        --splode-power: 0;
+        --super-splode-power: 0;
+    }
+
+    .splodebox:active {
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51);
+    }
+
+    .splodebox:hover {
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51),
+            0 0 5px 0px rgb(21, 34, 51);
+    }
+
+    .splode:active {
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51);
+    }
+
+    .splode:hover {
+        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51),
+            0 0 0px 0px rgb(21, 34, 51);
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 2px;
+}
+
+.item::-webkit-scrollbar {
+    width: 0.5em;
+    border-radius: 8px;
+}
+
+.item::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.item::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 2px;
+}
+
+@media screen and (max-width:1290px) and (min-width:900px) {
+
+    /* .topnavitem {
+        font-size: 10px !important;
+    } */
+    .topnav {
+        height: 70px;
+    }
+
+    .topnavicon {
+        transform: translateY(30%);
+    }
+
+    .logo {
+        transform: translateY(30%);
     }
 }
