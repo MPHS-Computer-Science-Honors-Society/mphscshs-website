@@ -72,11 +72,6 @@ p {
     padding-bottom: 0.4dvw;
 }
 
-.mid {
-    display: flex;
-    align-items: center;
-}
-
 .title span {
     color: var(--text-thirdendary);
 }
@@ -164,16 +159,6 @@ p {
 
 .code {
     font-family: "Space Mono", monospace;
-}
-
-
-
-@media screen and (min-width: 901px) {
-    .center.splitsection.mid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -719,6 +704,10 @@ body {
     }
 }
 
+.desc {
+    text-align: left;
+}
+
 @media (max-width: 900px) {
     .right-flex {
         display: none !important;
@@ -763,6 +752,10 @@ body {
     :root {
         --splode-power: 0;
         --super-splode-power: 0;
+    }
+
+    .desc {
+        text-align: center;
     }
 
     .splodebox:active {
@@ -849,4 +842,10 @@ body::-webkit-scrollbar-thumb {
     .logo {
         transform: translateY(30%);
     }
+}
+
+.vcenter {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
 }
