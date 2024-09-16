@@ -715,7 +715,7 @@ body {
 
     .slider {
         width: auto;
-        height: 58vh;
+        height: 61vh;
         /* margin: 0px 0px; */
         /* padding: none; */
     }
@@ -740,13 +740,13 @@ body {
 
     .item img {
         width: 100%;
-        max-height: 35vh;
     }
 
     #next,
     #prev {
         background-color: var(--text-thirdendary);
         border-radius: 4px;
+        max-width: 10vw;
     }
 
     :root {
