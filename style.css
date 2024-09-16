@@ -280,6 +280,7 @@ p {
 
 .topnavitem {
     padding: min(max(14px, (5px + 0.5vw)), 24px) min(16px + 1rem, (5px + 0.8vw + 1rem));
+
 }
 
 .topnavicon {
@@ -848,4 +849,8 @@ body::-webkit-scrollbar-thumb {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+#document, #attendence-form {
+    transition: height 0.5s ease;
 }
