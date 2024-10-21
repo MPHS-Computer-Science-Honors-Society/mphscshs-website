@@ -43,8 +43,6 @@ shade.addEventListener('click', () => {
 });
 
 function scaleShade() {
-    console.log("function 2");
-
     currentScale += .0333;
     shade.style.transform = "scale(" + currentScale + ", 1)";
     if (currentScale == 30) {

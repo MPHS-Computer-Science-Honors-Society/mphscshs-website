@@ -1,8 +1,11 @@
 let items = document.querySelectorAll('.slider .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
+let sliderbox = document.getElementById('slide');
     
 let active = 0;
+let autoInterval;
+let intTime = 7000;
 function loadShow(){
     let stt = 0;
     items[active].style.transform = `none`;
@@ -30,11 +33,46 @@ function loadShow(){
     }
 }
 loadShow();
-next.onclick = function(){
+
+autoInterval = setInterval(null, intTime);
+
+let onScreen;
+
+function autoSlide() {
     active = active + 1 < items.length ? active + 1 : 0;
     loadShow();
 }
-prev.onclick = function(){
+
+function isPartView() {
+    let rect = sliderbox.getBoundingClientRect();
+    return (
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom > 0 &&
+      rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      rect.right > 0
+    );
+}
+
+window.addEventListener('scroll', () => {
+    if (isPartView()) {
+        if (!onScreen) {
+            autoInterval = setInterval(autoSlide, intTime);
+            onScreen = true;
+        }
+    }
+    else {
+        clearInterval(autoInterval);
+        onScreen = false;
+    }
+})
+
+next.onclick = function() {
+    active = active + 1 < items.length ? active + 1 : 0;
+    clearInterval(autoInterval);
+    autoInterval = setInterval(autoSlide, intTime);
+    loadShow();
+}
+prev.onclick = function() {
     active = active - 1 >= 0 ? active - 1 : items.length - 1;
     loadShow();
 }
