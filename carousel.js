@@ -64,7 +64,7 @@ window.addEventListener('scroll', () => {
         clearInterval(autoInterval);
         onScreen = false;
     }
-})
+});
 
 next.onclick = function() {
     active = active + 1 < items.length ? active + 1 : 0;
@@ -76,3 +76,12 @@ prev.onclick = function() {
     active = active - 1 >= 0 ? active - 1 : items.length - 1;
     loadShow();
 }
+
+sliderbox.addEventListener('mouseenter', () => {
+    clearInterval(autoInterval);
+});
+
+sliderbox.addEventListener('mouseleave', () => {
+    autoInterval = setInterval(autoSlide, intTime);
+
+});
