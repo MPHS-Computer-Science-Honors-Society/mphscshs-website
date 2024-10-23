@@ -79,9 +79,10 @@ prev.onclick = function() {
 
 sliderbox.addEventListener('mouseenter', () => {
     clearInterval(autoInterval);
+    sliderbox.style.transform = 'scale(1.05)';
 });
 
 sliderbox.addEventListener('mouseleave', () => {
     autoInterval = setInterval(autoSlide, intTime);
-
+    sliderbox.style.transform = 'scale(1)'
 });
