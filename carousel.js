@@ -77,7 +77,7 @@ prev.onclick = function() {
     loadShow();
 }
 
-sliderbox.addEventListener('mouseenter', () => {
+sliderbox.addEventListener('mouseover', () => {
     clearInterval(autoInterval);
     sliderbox.style.transform = 'scale(1.05)';
 });
