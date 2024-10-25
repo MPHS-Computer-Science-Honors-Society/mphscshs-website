@@ -390,12 +390,15 @@ p {
 .formbutton:hover {
     background: #4ae093;
     box-shadow: 0 6px 20px rgba(41, 244, 88, 0.23);
+    transform: scale(1.025);
+    transition: transform 0.2s ease;
 }
 
 .grayed:hover {
     background-color: rgb(85, 85, 85);
     color: gray;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.23);
+    transform: scale(1);
 }
 
 /* The "responsive" class is added to  the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
