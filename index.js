@@ -51,15 +51,17 @@ function attendenceForm(form) {
     document.getElementById("attendence-form").src = "";
   } else {
     if (form == 1) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSc3rvk73AUQi_sVq0jSfBy0L_6qMKS0Qi5d3B7UvAC6qowEZw/viewform?embedded=true"
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSc3rvk73AUQi_sVq0jSfBy0L_6qMKS0Qi5d3B7UvAC6qowEZw/viewform?embedded=true";
       lastForm = form;
-    }  else {
+    } else if (form == 2) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScnqdaOoFmutZl5oF37hcylejRP4cAh3mq6gpgsmEzwrYYklQ/viewform?embedded=true";
+      lastForm = form;
+    } else {
       exit();
     }
     document.getElementById("attendence-form").height = 700;
   }
 }
-
 function documents(doc) {
   if (document.getElementById("document").src.includes("google") && lastDoc == doc) {
     document.getElementById("document").height = 50;
@@ -67,6 +69,9 @@ function documents(doc) {
   } else {
     if (doc == 1) {
       document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vT7Xfguc3w7f5UOSz168byXDLZe6ddUN1YHDekOmvaPLYILlvZ7sdoMq9D2NTcAMnGjJIUlWjggDWnr/pub?embedded=true"
+      lastDoc = doc;
+    } else if (doc == 2) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vSmceuPcL6JdElRMUIPRoAgXa1XD77Tj4TJt4EBq9IxhsT0smz2HuG78Y0hQ0yvxwC4whT1oU4HX-Vv/pub?embedded=true"
       lastDoc = doc;
     } else {
       exit();
