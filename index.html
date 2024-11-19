@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- the container part is so the footer doesn't get messed up by shorter content -->
-<div id="container">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +9,9 @@
     <meta name="keywords"
       content="CSHS, MPHS CSHS, computer science honor society, myers park high school, MPHS, club, homepage" />
     <meta name="author" content="CSHS Leadership" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="application-name" content="Myers Park Computer Science Honor Society Website" />
     <link rel="icon" type="image/x-icon" href="https://myersparkcshs.club/favicon.ico" />
     <link rel="favicon" type="image/x-icon" href="https://myersparkcshs.club/favicon.ico" />
-    <title>
-      CSHS Homepage
-    </title>
-    <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -28,14 +21,18 @@
         "logo": "https://myersparkcshs.club/favicon.ico"
       }
       </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>CSHS Homepage</title>
   </head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <body>  
+    <div id="container">
   <!-- nav bar -->
   <div class="topnav" id="myTopnav">
-    <a class="activepage logo" style="padding: 5px min((4px), (5px + 0.8vw)); display: inline-block;"
-      href="index.html"><img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo"
-        style="height: 2em;"></a>
+    <a class="activepage logo" style="padding: 5px min((4px), (5px + 0.8vw)); display: inline-block;" href="index.html">
+      <img src="assets\logos\CSHS_Web_Browser_Logo_TLCROP.png" id="logo" alt="CSHS Logo" style="height: 2em;" />
+    </a>
     <div class="flexer" id="menuitems">
       <a class="topnavitem" href="attendance.html">Attendance Recovery</a>
       <a class="topnavitem" href="forms.html">Forms</a>
@@ -43,22 +40,24 @@
       <a class="topnavitem" href="meetinginfo.html">Meeting Info</a>
     </div>
     <div class="right-flex">
-      <a class="topnavicon" href="https://discord.gg/W7sbkWZ9S6" target="_blank"><img
-          src="assets\logos\Discord.png" style="height: 2em;"></a>
-      <a class="topnavicon" href="https://www.instagram.com/myerspark_cshs/" target="_blank"><img
-          src="assets\logos\Instagram Logo (2).png" style="height: 2em;"></a>
-      <a class="topnavicon" href="https://github.com/MPHS-Computer-Science-Honors-Society" target="_blank"><img
-          src="assets\logos\25231.png" style="height: 2em;"></a>
-      <a class="topnavicon" href="https://www.remind.com/join/mphs-cshs" target="_blank"><img
-          src="assets\logos\Remind-Symbol.png" style="height: 2em"></a>
+      <a class="topnavicon" href="https://discord.gg/W7sbkWZ9S6" target="_blank">
+        <img src="assets\logos\Discord.png" style="height: 2em;" />
+      </a>
+      <a class="topnavicon" href="https://www.instagram.com/myerspark_cshs/" target="_blank">
+        <img src="assets\logos\Instagram Logo (2).png" style="height: 2em;" />
+      </a>
+      <a class="topnavicon" href="https://github.com/MPHS-Computer-Science-Honors-Society" target="_blank">
+        <img src="assets\logos\25231.png" style="height: 2em;" />
+      </a>
+      <a class="topnavicon" href="https://www.remind.com/join/mphs-cshs" target="_blank">
+        <img src="assets\logos\Remind-Symbol.png" style="height: 2em" />
+      </a>
     </div>
     <a href="javascript:void(0);" class="icon topnavitem" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 
-
-  <body>
     <main>
       <p class="title center" style="max-width: 100%; font-size: 60pt; font-weight: 700;">
         <span style="color: var(--text-primary)">
@@ -179,7 +178,6 @@
 
           <br>
     </main>
-  </body>
   <footer class="footer-container splode">
     <div class="footer">
       <div class="footer-heading footer-1">
@@ -208,8 +206,8 @@
   </footer>
 </div>
 
-<script src="index.js"></script>
-<script src="tilt.js"></script>
-<script src="carousel.js"></script>
-
+    <script src="index.js"></script>
+    <script src="tilt.js"></script>
+    <script src="carousel.js"></script>
+  </body>
 </html>
