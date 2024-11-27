@@ -106,6 +106,7 @@ p {
     padding: 20px 20px;
     box-shadow: 0 1px 12px rgba(7, 7, 7, 0.4);
     margin-bottom: 3vh;
+    transition: height 0.5s ease;
 }
 
 .calendar {
@@ -857,4 +858,184 @@ body::-webkit-scrollbar-thumb {
 
 #document, #attendence-form {
     transition: height 0.5s ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  max-width: 550px;
+  height: 40px;
+  margin-left: 30%;
+  margin-right: auto;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  
+  /* The slider */
+.switcher {
+  border-radius: 8px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-secondary);
+  transition: background-color 0.5s;
+}
+  
+.switcher:before {
+  border-radius: 8px;
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 49%;
+  left: 1%;
+  bottom: 4px;
+  background-color: var(--bg-primary);
+  transition: 0.5s ease;
+}
+
+input:checked + .switcher {
+  background-color: rgb(0, 130, 125);
+}
+
+input:focus + .switcher {
+  box-shadow: 0 0 1px var(--bg-secondary);
+}
+
+input:checked + .switcher:before {
+  -webkit-transform: translateX(99%);
+  -ms-transform: translateX(99%);
+  transform: translateX(100%);
+}
+
+.switchsplit {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.split div.switchsection {
+    padding: 0;
+    z-index: 999;
+    height: 100%;
+}
+
+.split div.switchsection p {
+    margin: 6px 0 0 0;
+    font-size: 16pt;
+    user-select: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.6s ease;
+}
+
+input:checked + .switcher .splitsection .left {
+    transition: 0.6s ease;
+    color: rgb(73, 73, 73);
+    font-weight: 400;
+    margin-top: 8px;
+    font-size: 14pt;
+}
+
+input:not(:checked) + .switcher .splitsection .right {
+    margin-top: 8px;
+    transition: 0.6s ease;
+    color: rgb(73, 73, 73);
+    font-weight: 400;
+    font-size: 14pt;
+}
+
+.caesarbox, .polybox {
+    height: 360px;
+    overflow: hidden;
+}
+
+.affbox {
+    height: 390px;
+}
+
+@media screen and (max-width:901px) {
+    .switchsplit {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .split div.switchsection p {
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+
+    .split div.splitsection .asection {
+        margin-top: 1rem;
+    }
+
+    .asplit {
+        margin-bottom: 1rem;
+    }
+
+    .affbox {
+        height: 390px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .split div.switchsection p {
+        display: none;
+        transition: color 0.6s ease;
+    }
+}
+
+input {
+    position: relative;
+    display: block;
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    width: 50%;
+    height: 30px;
+    font-size: 16pt;
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    border-color: var(--text-secondary);
+    padding-left: 6px;
+}
+
+input[type=number] {
+    width: 20%;
+    margin-left: 40%;
+}
+
+
+input:focus {
+    outline: 2px solid #4ae093;
+}
+
+.submit {
+    width: 20%;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: var(--text-secondary);
+    color: white;
+    font-size: 16pt;
+    font-family: var(--font-secondary);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 1.5rem;
+    text-align: center;
 }

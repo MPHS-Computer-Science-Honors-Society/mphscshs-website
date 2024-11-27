@@ -22,11 +22,11 @@ function transformElement(el, xyEl) {
     el.style.transform = transforms.apply(null, xyEl);
 }
 
-mouseOverContainer.onmousemove = function (e) {
-    let xy = [e.clientX, e.clientY];
-    let position = xy.concat([ex1Layer]);
+// mouseOverContainer.onmousemove = function (e) {
+//     let xy = [e.clientX, e.clientY];
+//     let position = xy.concat([ex1Layer]);
 
-    window.requestAnimationFrame(function () {
-        transformElement(ex1Layer, position);
-    });
-};
+//     window.requestAnimationFrame(function () {
+//         transformElement(ex1Layer, position);
+//     });
+// };
