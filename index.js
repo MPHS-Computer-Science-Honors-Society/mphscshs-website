@@ -56,6 +56,15 @@ function attendenceForm(form) {
     } else if (form == 2) {
       document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScnqdaOoFmutZl5oF37hcylejRP4cAh3mq6gpgsmEzwrYYklQ/viewform?embedded=true";
       lastForm = form;
+    } else if (form == 3) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdWGHNA_0dFoWMV4nhh4HmtSL4-F-U-_neb1j3YCItwdGbPBA/viewform?embedded=true";
+      lastForm = form;
+    } else if (form == 4) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfbiJpIOTDNmr4G4-6k0VHmjxGGRwccZwY9r_RkNsK-xqBsw/viewform?embedded=true";
+      lastForm = form;
+    } else if (form == 5) {
+      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfcZsT4_79b6TDpt7N1uSNQRPcXPkR8TDLh4pRbg9vquSgsw/viewform?embedded=true";
+      lastForm = form;
     } else {
       exit();
     }
@@ -72,6 +81,15 @@ function documents(doc) {
       lastDoc = doc;
     } else if (doc == 2) {
       document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vSmceuPcL6JdElRMUIPRoAgXa1XD77Tj4TJt4EBq9IxhsT0smz2HuG78Y0hQ0yvxwC4whT1oU4HX-Vv/pub?embedded=true"
+      lastDoc = doc;
+    } else if (doc == 3) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vRNvxinZIGw5pAdzerE2L_xQ8Gncsi6NxPONYl7n9FltbLm-B7U4w6vsmBqHNZVcCT1aE5JxxATFXoL/pub?embedded=true"
+      lastDoc = doc;
+    } else if (doc == 4) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vQqDqF502QZCU3_ztevNH_MpUh2nmJHu8BhjGPNHEmsPoIcceUS8eHmEdqIA_6SUztcBcis9q2RdN4x/pub?embedded=true"
+      lastDoc = doc;
+    } else if (doc == 5) {
+      document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vTuwm5nI9oTp2YHEE6zefd2FPmer0YuqXAQwMWA0-mUAq87sOqvR0alb2bA55Zc23JxCpWHtlNtckcR/pub?embedded=true"
       lastDoc = doc;
     } else {
       exit();
