@@ -71,85 +71,128 @@
         </p>
 
         <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">
+          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
             Slideshow
           </p>
 
-          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSXype38zkGZov3oPGwS3TzlTJyZ2Rn2yfsJCsae1lJKorF1p7lRXNsPW8XeKzJ0JeBzz3n8k8cSm4d/embed?start=false&loop=false&delayms=15000" frameborder="0" width="100%" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRweQpaDMXHO_dyQBEWte1IebGP3EEzoIrifP-h2Ir_4114G-x6BjG2jlxEasnd3xl9ob31vMsM_Ue7/embed?start=true&loop=true&delayms=5000" frameborder="0" width="100%" height="600" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
 
         <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">Tutorials</p>
-          <a class="title center" style="color:blue; text-align: center;" href="https://drive.google.com/drive/folders/1dXx94gsfE_LSfTB1GjPrHfT49_ScwYUv?usp=drive_link" target="_blank">Instruction Documents</a>
-          <a class="title center" style="color: blue; text-align: center;" href="https://www.youtube.com/watch?v=oU8-qV-ZtUY&list=PLKGarocXCE1H_HxOYihQMq0mlpqiUJj4L" target="_blank">Video Tutorials</a>
+          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+            Meeting Document
+          </p>
+
+          <iframe id="document" src="https://docs.google.com/document/d/e/2PACX-1vTuwm5nI9oTp2YHEE6zefd2FPmer0YuqXAQwMWA0-mUAq87sOqvR0alb2bA55Zc23JxCpWHtlNtckcR/pub?embedded=true"
+          width="63%" max-width="900px" height="600px" frameborder="0" class="center">Loading…</iframe>
         </div>
 
-        <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">Making a Block</p>
+        <div id="caesarbox" class="center aboutus box" style="z-index: 999; position: relative;">
+          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+            Caesar Cipher
+          </p>
+
+          <label class="switch">
+            <input type="checkbox" id="caesarswitch">
+            <span class="switcher round">
+              <div class="split switchsplit">
+                <div class="splitsection switchsection">
+                  <p class="left">Encode</p>
+                </div>
+                <div class="splitsection switchsection">
+                  <p class="right">Decode</p>
+                </div>
+              </div>
+            </span>
+          </label>
+
+          <input type="text" id="caesartext" placeholder="Enter plaintext here:">
+          <input type="number" id="caesarshift" placeholder="Enter shift here:">
+
+          <a class="center submit" type="button" id="caesarbutton">Cipher</a>
+
+          <p id="cR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem;">
+            
+          </p>
+          <p id="cCT" class="center">
+            
+          </p>
+        </div>
+
+
+
+        <div id="polybox" class="center aboutus box" style="z-index: 999; position: relative;">
+          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+            Polyalphabetic Cipher
+          </p>
+
+          <label class="switch">
+            <input type="checkbox" id="polyswitch">
+            <span class="switcher round">
+              <div class="split switchsplit">
+                <div class="splitsection switchsection">
+                  <p class="left">Encode</p>
+                </div>
+                <div class="splitsection switchsection">
+                  <p class="right">Decode</p>
+                </div>
+              </div>
+            </span>
+          </label>
+
+          <input type="text" id="polytext" placeholder="Enter plaintext here:">
+          <input type="text" id="polyshift" placeholder="Enter key here:">
+
+          <a class="center submit" type="button" id="polybutton">Cipher</a>
+
+          <p id="pR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem;">
+            
+          </p>
+          <p id="pCT" class="center">
+            
+          </p>
+        </div>
+
+
         
-
-          <iframe id="document" src="https://docs.google.com/document/d/e/2PACX-1vQ5HfDlaRjXU82bu3zAzR-v1XifNQ9g1L9MIHgYaCq9IXStzUj2MZQQe2OMmLPlYLji6wsaxcEpFpcT/pub?embedded=true"
-          width="63%" max-width="900px" height="600px" frameborder="0" class="center">Loading…</iframe>
-        </div>
-
-        <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">Making a Recipe</p>
-
-          <iframe id="document" src="https://docs.google.com/document/d/e/2PACX-1vRNvxinZIGw5pAdzerE2L_xQ8Gncsi6NxPONYl7n9FltbLm-B7U4w6vsmBqHNZVcCT1aE5JxxATFXoL/pub?embedded=true"
-          width="63%" max-width="900px" height="600px" frameborder="0" class="center">Loading…</iframe>
-        </div>
-
-
-        <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">Helpful Videos!</p>
-
-          <iframe class="center" width="60%" height="415" src="https://www.youtube.com/embed/G1ZGToiB9_U?si=8ObTOGbOEB-72wTe" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-          <iframe class="center" style="margin-top: 1rem;" width="60%" height="415" src="https://www.youtube.com/embed/Y2w0PgvABVU?si=0ecg9wDUhqByeLRV" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-          <iframe class="center" style="margin-top: 1rem;" width="60%" height="415" src="https://www.youtube.com/embed/WoX__Wulx3o?si=wMXdpMkuQ7eEwDX7" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-          <iframe class="center" style="margin-top: 1rem;" width="60%" height="415" src="https://www.youtube.com/embed/9wCQkJtwqUQ?si=99a-Yk2NGHattPdt" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-
-
-        <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 1rem; margin-top: 0;">Get Ahead!</p>
-
-          <iframe class="center" width="60%" height="415" src="https://www.youtube.com/embed/videoseries?si=UKCg5taSOShY39Pm&amp;list=PLKGarocXCE1GspJBXQEGuhazihZCSSLmK" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p class="center" style="width: 80%; max-width: 1600px;">
-            Click the three lines in the top right of the video to view the playlist.
-            <br>
-            We have reviewed episodes 1-4 and part of 5 in class, though you can watch any tutorial that fits your needs of your mod.
-          </p>
-        </div>
-
-
-
-        <div class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title" style="margin-bottom: 0; margin-top: 0;">
-            Important Information
+        <div id="affbox" class="affbox center aboutus box" style="z-index: 999; position: relative;">
+          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+            Affine Cipher
           </p>
 
-          <p class="center" style="width: 90%; max-width: 1600px;">
-            If you haven't already, please fill out the Join Form at the buttom below or on the forms page!
-            The Join Form will be due by next meeting (October 25th), however,
-            club dues are due by the November 8th, so feel free to skip that step if it is stopping you from submitting right now.
-          </p>
-          <a class="formbutton" target="_blank" style="display: block; margin-left: auto; margin-right: auto; width: 10vw; max-width: 300px; text-align: center; text-decoration: none;" href="forms.html"><b>Join!</b></a>
-          <p class="center" style="width: 90%; max-width: 1600px;"><b>Super excited for a successful year in CSHS!</b></p>
-        </div>
+          <label class="switch">
+            <input type="checkbox" id="affswitch">
+            <span class="switcher round">
+              <div class="split switchsplit">
+                <div class="splitsection switchsection">
+                  <p class="left">Encode</p>
+                </div>
+                <div class="splitsection switchsection">
+                  <p class="right">Decode</p>
+                </div>
+              </div>
+            </span>
+          </label>
 
+          <input type="text" id="afftext" placeholder="Enter plaintext here:">
+          <div class="center split asplit" style="width: 40%;">
+            <div class="splitsection">
+              <input type="number" id="affkeya" placeholder="a = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
+            </div>
+            <div class="splitsection">
+              <input type="number" id="affkeyb" placeholder="b = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
+            </div>
+          </div>
+
+          <a class="center submit" type="button" id="affbutton" style="margin-top: 0;">Cipher</a>
+
+          <p id="aR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem;">
+            
+          </p>
+          <p id="aCT" class="center">
+            
+          </p>
+        </div>
     </main>
 
   </body>
@@ -177,5 +220,6 @@
 
 <script src="index.js"></script>
 <script src="tilt.js"></script>
+<script src="ciphers.js"></script>
 
 </html>
