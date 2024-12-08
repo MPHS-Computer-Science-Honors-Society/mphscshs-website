@@ -6,7 +6,7 @@ button.addEventListener('click', () => {
     console.log(clickCount);
 
     if (clickCount == 15) {
-        button.href = "secret.html";
+        button.href = "supersecret.html";
     }
 });
 
