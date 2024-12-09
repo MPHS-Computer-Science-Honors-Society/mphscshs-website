@@ -28,19 +28,16 @@ secretSubmit.addEventListener('click', () => {
             }
         }, 80);
 
-        let elementHeight = document.getElementById('sR').offsetHeight + secretResult.offsetHeight;
-
         if (secretCount == 0) { 
-            secretBox.height = secretBox.offsetHeight + elementHeight;
+            secretBox.height = String(secretBox.offsetHeight) + "px";
+            secretCount++;
         }
-
-        secretCount++;
     }
 });
 
 function secretCipher(text, key, mode) {
     if (mode.checked) {
-        return "CODING IS HARD :(";
+        return "";
     }
     let index = 0;
     let tempKey = "";
@@ -77,7 +74,7 @@ function secretCipher(text, key, mode) {
         } else {
             resultText += textChar;
         }
-        if (resultText === "DEIAHOXUF") resultText = "tinyurl.com/" + resultText;
+
     }
-    return resultText;
+    return "tinyurl.com/" + resultText;
 }

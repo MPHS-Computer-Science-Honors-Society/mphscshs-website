@@ -4,6 +4,7 @@ const caesarShift = document.getElementById('caesarshift');
 const caesarText = document.getElementById('caesartext');
 const caesarBox = document.getElementById('caesarbox');
 const caesarResult = document.getElementById('cCT');
+let caesarCounter = 0;
 var caesarInterval = setInterval(() => {}, 0);
 
 
@@ -12,8 +13,7 @@ caesarSubmit.addEventListener('click', () => {
     var i = 0;
     caesarResult.textContent = "";
 
-    if (caesarText.value.length && caesarShift.value.length){
-        if (caesarBox.offsetHeight)
+    if (caesarText.value.length && caesarShift.value.length) {
         document.getElementById('cR').textContent = "Result:"
         var ciphertext = caesarCipher(caesarText.value, Number(caesarShift.value), caesarSwitch);
         
@@ -27,6 +27,11 @@ caesarSubmit.addEventListener('click', () => {
                 clearInterval(caesarInterval);
             }
         }, 80);
+
+        if (caesarCounter == 0) { 
+            caesarBox.style.height = String(caesarBox.offsetHeight) + "px";
+            caesarCounter++;
+        }
     }
 });
 

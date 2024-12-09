@@ -4,6 +4,7 @@ const polyShift = document.getElementById('polyshift');
 const polyText = document.getElementById('polytext');
 const polyBox = document.getElementById('polybox');
 const polyResult = document.getElementById('pCT');
+var polyCounter = 0;
 var polyInterval = setInterval(() => { }, 0);
 
 polySubmit.addEventListener('click', () => {
@@ -12,7 +13,6 @@ polySubmit.addEventListener('click', () => {
     polyResult.textContent = "";
 
     if (polyText.value.length && polyShift.value.length) {
-        polyBox.style.height = "530px";
         document.getElementById('pR').textContent = "Result:"
 
         if (polySwitch.checked) {
@@ -32,6 +32,11 @@ polySubmit.addEventListener('click', () => {
                 clearInterval(polyInterval);
             }
         }, 80);
+
+        if (polyCounter == 0) {
+            polyBox.style.height = String(polyBox.offsetHeight) + "px";
+            polyCounter++;
+        }
     }
 });
 

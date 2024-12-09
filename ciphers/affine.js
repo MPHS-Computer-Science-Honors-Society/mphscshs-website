@@ -29,12 +29,10 @@ affSubmit.addEventListener('click', () => {
             }
         }, 80);
 
-        let elementHeight = document.getElementById('aR').offsetHeight + affResult.offsetHeight;
-
         if (affCounter == 0) { 
             affBox.style.height = String(affBox.offsetHeight + elementHeight) + "px";
+            affCounter++;
         }
-        affCounter++;
     }
 });
 

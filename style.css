@@ -954,7 +954,6 @@ input:not(:checked) + .switcher .splitsection .right {
     font-size: 14pt;
 }
 
-
 @media screen and (max-width:901px) {
     .switchsplit {
         flex-direction: row;
@@ -973,10 +972,6 @@ input:not(:checked) + .switcher .splitsection .right {
 
     .asplit {
         margin-bottom: 1rem;
-    }
-
-    .affbox {
-        height: 390px;
     }
 }
 
