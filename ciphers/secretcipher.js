@@ -40,7 +40,7 @@ secretSubmit.addEventListener('click', () => {
 
 function secretCipher(text, key, mode) {
     if (mode.checked) {
-        return "CODING IS HARD :(";
+        return "club/secret";
     }
     let index = 0;
     let tempKey = "";
