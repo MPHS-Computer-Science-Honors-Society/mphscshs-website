@@ -3,10 +3,20 @@ var clickCount = 0;
 
 button.addEventListener('click', () => {
     clickCount++;
-    console.log(clickCount);
 
     if (clickCount == 15) {
-        button.href = "supersecret.html";
+        button.href = "secret.html";
+    }
+});
+
+const secretButton = document.getElementById("samanthaButton");
+var secretClickCount = 0;
+
+secretButton.addEventListener('click', () => {
+    secretClickCount++;
+
+    if (secretClickCount == 15) {
+        secretButton.href = "supersecret.html";
     }
 });
 

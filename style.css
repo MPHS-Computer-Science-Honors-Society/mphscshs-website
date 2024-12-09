@@ -954,14 +954,6 @@ input:not(:checked) + .switcher .splitsection .right {
     font-size: 14pt;
 }
 
-.caesarbox, .polybox {
-    height: 360px;
-    overflow: hidden;
-}
-
-.affbox {
-    height: 390px;
-}
 
 @media screen and (max-width:901px) {
     .switchsplit {
