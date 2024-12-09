@@ -4,25 +4,28 @@ const affKeyA = document.getElementById('affkeya');
 const affKeyB = document.getElementById('affkeyb');
 const affText = document.getElementById('afftext');
 const affBox = document.getElementById('affbox');
-const affResult = document.getElementById('aCT');
+const affCipherText = document.getElementById('aCT');
+const affResult = document.getElementById('aR')
+const aoHeight = parseFloat(getComputedStyle(document.getElementById('affcontentheight')).height);
 let affCounter = 0;
 var affInterval = setInterval(() => { }, 0);
 
+affBox.style.height = String(aoHeight + 16) + 'px';
 
 affSubmit.addEventListener('click', () => {
     clearInterval(affInterval)
     var i = 0;
-    affResult.textContent = "";
+    affCipherText.textContent = "";
 
     if (affText.value.length && affKeyA.value.length && affKeyB.value.length) {
-        document.getElementById('aR').textContent = "Result:";
+        affResult.textContent = "Result:";
         var ciphertext = affineCipher(affText.value, Number(affKeyA.value), Number(affKeyB.value), affSwitch);
 
         const cipherArray = ciphertext.split('');
 
         affInterval = setInterval(() => {
             if (i < cipherArray.length) {
-                affResult.textContent += cipherArray[i];
+                affCipherText.textContent += cipherArray[i];
                 i++;
             } else {
                 clearInterval(affInterval);
@@ -30,7 +33,7 @@ affSubmit.addEventListener('click', () => {
         }, 80);
 
         if (affCounter == 0) { 
-            affBox.style.height = String(affBox.offsetHeight + elementHeight) + "px";
+            affBox.style.height = String(aoHeight + affResult.clientHeight + 75) + "px";
             affCounter++;
         }
     }

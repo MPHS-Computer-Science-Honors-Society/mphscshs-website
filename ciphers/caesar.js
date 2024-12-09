@@ -3,25 +3,28 @@ const caesarSwitch = document.getElementById('caesarswitch');
 const caesarShift = document.getElementById('caesarshift');
 const caesarText = document.getElementById('caesartext');
 const caesarBox = document.getElementById('caesarbox');
-const caesarResult = document.getElementById('cCT');
+const caesarCipherText = document.getElementById('cCT');
+const caesarResult = document.getElementById('cR');
+const coHeight = parseFloat(getComputedStyle(document.getElementById('caesarcontentheight')).height);
 let caesarCounter = 0;
 var caesarInterval = setInterval(() => {}, 0);
 
+caesarBox.style.height = String(coHeight + 16) + 'px';
 
 caesarSubmit.addEventListener('click', () => {
     clearInterval(caesarInterval)
     var i = 0;
-    caesarResult.textContent = "";
+    caesarCipherText.textContent = "";
 
     if (caesarText.value.length && caesarShift.value.length) {
-        document.getElementById('cR').textContent = "Result:"
+        caesarResult.textContent = "Result:"
         var ciphertext = caesarCipher(caesarText.value, Number(caesarShift.value), caesarSwitch);
         
         const cipherArray = ciphertext.split('');
-        
+    
         caesarInterval = setInterval(() => {
             if (i < cipherArray.length) {
-                caesarResult.textContent += cipherArray[i];
+                caesarCipherText.textContent += cipherArray[i];
                 i++;
             } else {
                 clearInterval(caesarInterval);
@@ -29,7 +32,7 @@ caesarSubmit.addEventListener('click', () => {
         }, 80);
 
         if (caesarCounter == 0) { 
-            caesarBox.style.height = String(caesarBox.offsetHeight) + "px";
+            caesarBox.style.height = String(coHeight + caesarResult.clientHeight + 75) + "px";
             caesarCounter++;
         }
     }

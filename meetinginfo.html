@@ -87,108 +87,114 @@
           width="63%" max-width="900px" height="600px" frameborder="0" class="center">Loading…</iframe>
         </div>
 
-        <div id="caesarbox" class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
-            Caesar Cipher
-          </p>
-
-          <label class="switch">
-            <input type="checkbox" id="caesarswitch">
-            <span class="switcher round">
-              <div class="split switchsplit">
-                <div class="splitsection switchsection">
-                  <p class="left">Encode</p>
+        <div id="caesarbox" class="cipher center aboutus box" style="z-index: 999; position: relative;">
+          <div id="caesarcontentheight">
+            <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+              Caesar Cipher
+            </p>
+  
+            <label class="switch">
+              <input type="checkbox" id="caesarswitch">
+              <span class="switcher round">
+                <div class="split switchsplit">
+                  <div class="splitsection switchsection">
+                    <p class="left">Encode</p>
+                  </div>
+                  <div class="splitsection switchsection">
+                    <p class="right">Decode</p>
+                  </div>
                 </div>
-                <div class="splitsection switchsection">
-                  <p class="right">Decode</p>
-                </div>
-              </div>
-            </span>
-          </label>
-
-          <input type="text" id="caesartext" placeholder="Enter plaintext here:">
-          <input type="number" id="caesarshift" placeholder="Enter shift here:">
-
-          <a class="center submit" type="button" id="caesarbutton">Cipher</a>
-
-          <p id="cR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
-          </p>
-          <p id="cCT" class="center"></p>
+              </span>
+            </label>
+  
+            <input type="text" id="caesartext" placeholder="Enter plaintext here:">
+            <input type="number" id="caesarshift" placeholder="Enter shift here:">
+  
+            <a class="center submit" type="button" id="caesarbutton">Cipher</a>
+  
+            <p id="cR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
+            </p>
+            <p id="cCT" class="center"></p>
+          </div>
         </div>
 
 
 
-        <div id="polybox" class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
-            Polyalphabetic Cipher
-          </p>
-
-          <label class="switch">
-            <input type="checkbox" id="polyswitch">
-            <span class="switcher round">
-              <div class="split switchsplit">
-                <div class="splitsection switchsection">
-                  <p class="left">Encode</p>
+        <div id="polybox" class="cipher center aboutus box" style="z-index: 999; position: relative;">
+          <div id="polycontentheight">
+            <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+              Polyalphabetic Cipher
+            </p>
+  
+            <label class="switch">
+              <input type="checkbox" id="polyswitch">
+              <span class="switcher round">
+                <div class="split switchsplit">
+                  <div class="splitsection switchsection">
+                    <p class="left">Encode</p>
+                  </div>
+                  <div class="splitsection switchsection">
+                    <p class="right">Decode</p>
+                  </div>
                 </div>
-                <div class="splitsection switchsection">
-                  <p class="right">Decode</p>
-                </div>
-              </div>
-            </span>
-          </label>
-
-          <input type="text" id="polytext" placeholder="Enter plaintext here:">
-          <input type="text" id="polyshift" placeholder="Enter key here:">
-
-          <a class="center submit" type="button" id="polybutton">Cipher</a>
-
-          <p id="pR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
-            
-          </p>
-          <p id="pCT" class="center">
-            
-          </p>
+              </span>
+            </label>
+  
+            <input type="text" id="polytext" placeholder="Enter plaintext here:">
+            <input type="text" id="polyshift" placeholder="Enter key here:">
+  
+            <a class="center submit" type="button" id="polybutton">Cipher</a>
+  
+            <p id="pR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
+              
+            </p>
+            <p id="pCT" class="center">
+              
+            </p>
+          </div>
         </div>
 
 
         
-        <div id="affbox" class="center aboutus box" style="z-index: 999; position: relative;">
-          <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
-            Affine Cipher
-          </p>
-
-          <label class="switch">
-            <input type="checkbox" id="affswitch">
-            <span class="switcher round">
-              <div class="split switchsplit">
-                <div class="splitsection switchsection">
-                  <p class="left">Encode</p>
+        <div id="affbox" class="cipher center aboutus box" style="z-index: 999; position: relative;">
+          <div id="affcontentheight">
+            <p class="title center" style="margin-bottom: 1rem; margin-top: 0;">
+              Affine Cipher
+            </p>
+  
+            <label class="switch">
+              <input type="checkbox" id="affswitch">
+              <span class="switcher round">
+                <div class="split switchsplit">
+                  <div class="splitsection switchsection">
+                    <p class="left">Encode</p>
+                  </div>
+                  <div class="splitsection switchsection">
+                    <p class="right">Decode</p>
+                  </div>
                 </div>
-                <div class="splitsection switchsection">
-                  <p class="right">Decode</p>
-                </div>
+              </span>
+            </label>
+  
+            <input type="text" id="afftext" placeholder="Enter plaintext here:">
+            <div class="center split asplit" style="width: 40%;">
+              <div class="splitsection">
+                <input type="number" id="affkeya" placeholder="a = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
               </div>
-            </span>
-          </label>
-
-          <input type="text" id="afftext" placeholder="Enter plaintext here:">
-          <div class="center split asplit" style="width: 40%;">
-            <div class="splitsection">
-              <input type="number" id="affkeya" placeholder="a = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
+              <div class="splitsection">
+                <input type="number" id="affkeyb" placeholder="b = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
+              </div>
             </div>
-            <div class="splitsection">
-              <input type="number" id="affkeyb" placeholder="b = " class="aSection" style="width: 100%; margin-left: 0; margin-right: 0;">
-            </div>
+  
+            <a class="center submit" type="button" id="affbutton" style="margin-top: 0;">Cipher</a>
+  
+            <p id="aR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
+              
+            </p>
+            <p id="aCT" class="center">
+  
+            </p>
           </div>
-
-          <a class="center submit" type="button" id="affbutton" style="margin-top: 0;">Cipher</a>
-
-          <p id="aR" class="title center" style="margin-bottom: 1rem; margin-top: 1rem; padding-bottom: 0;">
-            
-          </p>
-          <p id="aCT" class="center">
-
-          </p>
         </div>
     </main>
 

@@ -3,25 +3,30 @@ const secretSwitch = document.getElementById('secretswitch');
 const secretKey = document.getElementById('secretkey');
 const secretText = document.getElementById('secrettext');
 const secretBox = document.getElementById('secretbox');
-const secretResult = document.getElementById('sCT');
+const secretCipherText = document.getElementById('sCT');
+const secretResult = document.getElementById('sR');
+const soHeight = parseFloat(getComputedStyle(document.getElementById('secretcontentheight')).height);
 let secretCount = 0;
 var secretInterval = setInterval(() => { }, 0);
 
+console.log(soHeight);
+
+secretBox.style.height = String(soHeight + 16) + "px";
 
 secretSubmit.addEventListener('click', () => {
     clearInterval(secretInterval)
     var i = 0;
-    secretResult.textContent = "";
+    secretCipherText.textContent = "";
 
     if (secretText.value.length && secretKey.value.length) {
-        document.getElementById('sR').textContent = "Result:";
+        secretResult.textContent = "Result:";
         var ciphertext = secretCipher(secretText.value, secretKey.value, secretSwitch);
 
         const cipherArray = ciphertext.split('');
 
         secretInterval = setInterval(() => {
             if (i < cipherArray.length) {
-                secretResult.textContent += cipherArray[i];
+                secretCipherText.textContent += cipherArray[i];
                 i++;
             } else {
                 clearInterval(secretInterval);
@@ -37,7 +42,7 @@ secretSubmit.addEventListener('click', () => {
 
 function secretCipher(text, key, mode) {
     if (mode.checked) {
-        return "";
+        return "club/secret";
     }
     let index = 0;
     let tempKey = "";

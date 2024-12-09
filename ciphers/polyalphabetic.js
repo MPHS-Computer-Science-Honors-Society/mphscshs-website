@@ -3,17 +3,21 @@ const polySwitch = document.getElementById('polyswitch');
 const polyShift = document.getElementById('polyshift');
 const polyText = document.getElementById('polytext');
 const polyBox = document.getElementById('polybox');
-const polyResult = document.getElementById('pCT');
+const polyResult = document.getElementById('pR')
+const polyCipherText = document.getElementById('pCT');
+const poHeight = parseFloat(getComputedStyle(document.getElementById('polycontentheight')).height);
 var polyCounter = 0;
 var polyInterval = setInterval(() => { }, 0);
+
+polyBox.style.height = String(poHeight + 16) + "px";
 
 polySubmit.addEventListener('click', () => {
     clearInterval(polyInterval)
     var i = 0;
-    polyResult.textContent = "";
+    polyCipherText.textContent = "";
 
     if (polyText.value.length && polyShift.value.length) {
-        document.getElementById('pR').textContent = "Result:"
+        polyResult.textContent = "Result:"
 
         if (polySwitch.checked) {
             var ciphertext = polyDecipher(polyText.value, polyShift.value);
@@ -26,7 +30,7 @@ polySubmit.addEventListener('click', () => {
 
         polyInterval = setInterval(() => {
             if (i < cipherArray.length) {
-                polyResult.textContent += cipherArray[i];
+                polyCipherText.textContent += cipherArray[i];
                 i++;
             } else {
                 clearInterval(polyInterval);
@@ -34,7 +38,7 @@ polySubmit.addEventListener('click', () => {
         }, 80);
 
         if (polyCounter == 0) {
-            polyBox.style.height = String(polyBox.offsetHeight) + "px";
+            polyBox.style.height = String(poHeight + polyResult.offsetHeight + 75) + "px";
             polyCounter++;
         }
     }
