@@ -77,7 +77,7 @@ function secretCipher(text, key, mode) {
         } else {
             resultText += textChar;
         }
-        if (resultText === "DEIAHOXUF") resultText = "tinyurl.com/" + resultText;
     }
+    if (resultText === "HBILAHMFROAI") resultText = "tinyurl.com/" + resultText;
     return resultText;
 }
