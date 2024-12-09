@@ -40,7 +40,7 @@ secretSubmit.addEventListener('click', () => {
 
 function secretCipher(text, key, mode) {
     if (mode.checked) {
-        return "";
+        return "CODING IS HARD :(";
     }
     let index = 0;
     let tempKey = "";
@@ -77,6 +77,7 @@ function secretCipher(text, key, mode) {
         } else {
             resultText += textChar;
         }
+        if (resultText === "DEIAHOXUF") resultText = "tinyurl.com/" + resultText;
     }
-    return "tinyurl.com/" + resultText;
+    return resultText;
 }
