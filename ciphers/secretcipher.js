@@ -79,6 +79,6 @@ function secretCipher(text, key, mode) {
         }
 
     }
-    if (resultText === "HBILAHMFROAI") resultText = "tinyurl.com/" + resultText;
-    return resultText;
+
+    return resultText === "HBILAHMFROAI" ? "tinyurl.com/" + resultText : resultText;
 }
