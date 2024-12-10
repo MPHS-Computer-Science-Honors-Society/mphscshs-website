@@ -9,8 +9,6 @@ const soHeight = parseFloat(getComputedStyle(document.getElementById('secretcont
 let secretCount = 0;
 var secretInterval = setInterval(() => { }, 0);
 
-console.log(soHeight);
-
 secretBox.style.height = String(soHeight + 16) + "px";
 
 secretSubmit.addEventListener('click', () => {
@@ -34,7 +32,7 @@ secretSubmit.addEventListener('click', () => {
         }, 80);
 
         if (secretCount == 0) { 
-            secretBox.height = String(secretBox.offsetHeight) + "px";
+            secretBox.height = String(soHeight + secretResult.clientHeight + 75) + "px";
             secretCount++;
         }
     }
