@@ -5,6 +5,8 @@ const caesarText = document.getElementById('caesartext');
 const caesarBox = document.getElementById('caesarbox');
 const caesarCipherText = document.getElementById('cCT');
 const caesarResult = document.getElementById('cR');
+
+// original height of the content in the box
 const coHeight = parseFloat(getComputedStyle(document.getElementById('caesarcontentheight')).height);
 let caesarCounter = 0;
 var caesarInterval = setInterval(() => {}, 0);

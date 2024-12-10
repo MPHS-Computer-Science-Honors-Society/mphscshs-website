@@ -5,6 +5,8 @@ const polyText = document.getElementById('polytext');
 const polyBox = document.getElementById('polybox');
 const polyResult = document.getElementById('pR')
 const polyCipherText = document.getElementById('pCT');
+
+// original height of the content in the box
 const poHeight = parseFloat(getComputedStyle(document.getElementById('polycontentheight')).height);
 var polyCounter = 0;
 var polyInterval = setInterval(() => { }, 0);

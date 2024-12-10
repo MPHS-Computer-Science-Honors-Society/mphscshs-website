@@ -5,6 +5,8 @@ const secretText = document.getElementById('secrettext');
 const secretBox = document.getElementById('secretbox');
 const secretCipherText = document.getElementById('sCT');
 const secretResult = document.getElementById('sR');
+
+// original height of the content in the box
 const soHeight = parseFloat(getComputedStyle(document.getElementById('secretcontentheight')).height);
 let secretCount = 0;
 var secretInterval = setInterval(() => { }, 0);
