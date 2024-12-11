@@ -856,7 +856,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: auto;
 }
 
-#document, #attendence-form {
+#document, #attendance-form {
     transition: height 0.5s ease;
 }
 

@@ -44,33 +44,32 @@
 var lastForm = 0;
 var lastDoc = 0;
 
-function attendenceForm(form) {
-  if (document.getElementById("attendence-form").src.includes("google") && lastForm == form) {
-    // console.log(document.getElementById("attendence-form").src)
-    document.getElementById("attendence-form").height = 50;
-    document.getElementById("attendence-form").src = "";
+function attendanceForm(form) {
+  if (document.getElementById("attendance-form").src.includes("google") && lastForm == form) {
+    // console.log(document.getElementById("attendance-form").src)
+    document.getElementById("attendance-form").height = 50;
+    document.getElementById("attendance-form").src = "";
   } else {
     if (form == 1) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSc3rvk73AUQi_sVq0jSfBy0L_6qMKS0Qi5d3B7UvAC6qowEZw/viewform?embedded=true";
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSc3rvk73AUQi_sVq0jSfBy0L_6qMKS0Qi5d3B7UvAC6qowEZw/viewform?embedded=true";
       lastForm = form;
     } else if (form == 2) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScnqdaOoFmutZl5oF37hcylejRP4cAh3mq6gpgsmEzwrYYklQ/viewform?embedded=true";
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLScnqdaOoFmutZl5oF37hcylejRP4cAh3mq6gpgsmEzwrYYklQ/viewform?embedded=true";
       lastForm = form;
     } else if (form == 3) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdWGHNA_0dFoWMV4nhh4HmtSL4-F-U-_neb1j3YCItwdGbPBA/viewform?embedded=true";
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdWGHNA_0dFoWMV4nhh4HmtSL4-F-U-_neb1j3YCItwdGbPBA/viewform?embedded=true";
       lastForm = form;
     } else if (form == 4) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfbiJpIOTDNmr4G4-6k0VHmjxGGRwccZwY9r_RkNsK-xqBsw/viewform?embedded=true";
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfbiJpIOTDNmr4G4-6k0VHmjxGGRwccZwY9r_RkNsK-xqBsw/viewform?embedded=true";
       lastForm = form;
     } else if (form == 5) {
-      document.getElementById("attendence-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfcZsT4_79b6TDpt7N1uSNQRPcXPkR8TDLh4pRbg9vquSgsw/viewform?embedded=true";
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfcZsT4_79b6TDpt7N1uSNQRPcXPkR8TDLh4pRbg9vquSgsw/viewform?embedded=true";
       lastForm = form;
-    } else {
-      exit();
     }
-    document.getElementById("attendence-form").height = 700;
+    document.getElementById("attendance-form").height = 700;
   }
 }
+
 function documents(doc) {
   if (document.getElementById("document").src.includes("google") && lastDoc == doc) {
     document.getElementById("document").height = 50;
@@ -91,8 +90,6 @@ function documents(doc) {
     } else if (doc == 5) {
       document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vTuwm5nI9oTp2YHEE6zefd2FPmer0YuqXAQwMWA0-mUAq87sOqvR0alb2bA55Zc23JxCpWHtlNtckcR/pub?embedded=true"
       lastDoc = doc;
-    } else {
-      exit();
     }
     if (window.innerWidth < 500) {
       document.getElementById("document").width = "100%";
