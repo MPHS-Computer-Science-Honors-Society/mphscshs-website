@@ -5,6 +5,8 @@ const secretText = document.getElementById('secrettext');
 const secretBox = document.getElementById('secretbox');
 const secretCipherText = document.getElementById('sCT');
 const secretResult = document.getElementById('sR');
+
+// original height of the content in the box
 const soHeight = parseFloat(getComputedStyle(document.getElementById('secretcontentheight')).height);
 let secretCount = 0;
 var secretInterval = setInterval(() => { }, 0);
@@ -32,7 +34,7 @@ secretSubmit.addEventListener('click', () => {
         }, 80);
 
         if (secretCount == 0) { 
-            secretBox.height = String(soHeight + secretResult.clientHeight + 75) + "px";
+            secretBox.style.height = String(soHeight + secretResult.clientHeight + 75) + "px";
             secretCount++;
         }
     }
@@ -56,12 +58,8 @@ function secretCipher(text, key, mode) {
     text = text.toUpperCase();
     key = key.toUpperCase();
     let resultText = '';
-    console.log(tempKey);
     let keyCount = 0;
-    console.log(text.length);
-    console.log(key);
     for (let i = 0; i < text.length; i++) {
-        console.log("key count: " + keyCount);
         const textChar = text[i];
         const keyChar = key[keyCount];
         if (alphabet.includes(textChar)) {
@@ -69,8 +67,6 @@ function secretCipher(text, key, mode) {
             const keyIndex = alphabet.indexOf(keyChar);
 
             let newIndex;
-            console.log("textChar: " + textChar + "\ntextIndex: " + textIndex);
-            console.log("keyChar: " + keyChar + "\nkeyIndex: " + keyIndex);
             newIndex = (Math.pow(textIndex, 2) + Math.pow(keyIndex, 2)) % 26;
             resultText += alphabet[newIndex];
             keyCount++;

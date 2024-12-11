@@ -6,6 +6,8 @@ const affText = document.getElementById('afftext');
 const affBox = document.getElementById('affbox');
 const affCipherText = document.getElementById('aCT');
 const affResult = document.getElementById('aR')
+
+// original height of the content in the box
 const aoHeight = parseFloat(getComputedStyle(document.getElementById('affcontentheight')).height);
 let affCounter = 0;
 var affInterval = setInterval(() => { }, 0);
