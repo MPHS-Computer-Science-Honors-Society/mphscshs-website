@@ -90,6 +90,10 @@ function documents(doc) {
     } else if (doc == 5) {
       document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vTuwm5nI9oTp2YHEE6zefd2FPmer0YuqXAQwMWA0-mUAq87sOqvR0alb2bA55Zc23JxCpWHtlNtckcR/pub?embedded=true"
       lastDoc = doc;
+    } else {
+      document.getElementById("document").height = 50;
+      document.getElementById("document").src = "";
+      return;
     }
     if (window.innerWidth < 500) {
       document.getElementById("document").width = "100%";
