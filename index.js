@@ -68,8 +68,7 @@ function attendanceForm(form) {
     } else if (form == 6) {
       document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSeRKRByI8JGvvn9Xs3l_t2iFjmaMrj5UiFiUgY6SffrOXM3Wg/viewform?embedded=true";
       lastForm = form;
-    } 
-    else if (form == 8) {
+    } else if (form == 8) {
       document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdaBEoU0otGbNa0MAZJpIMcDqOniPba4KVA9mRGqr1HKovwFg/viewform?embedded=true";
       lastForm = form;
     } else {
@@ -113,6 +112,9 @@ function documents(doc) {
       lastDoc = doc;
     } else if (doc == 8) {
       document.getElementById("document").src = "https://docs.google.com/presentation/d/e/2PACX-1vTGlTgExFkcLwVjZLs5y1EB9zsQ-K96F5l50St-Wa-c_IgCU0PZxjD4tzDGpgLkkycBRnfa0o0hQuKQ/embed?start=true&loop=true&delayms=10000";
+      lastDoc = doc;
+    } else if (doc == 9) {
+      document.getElementById("document").src = "https://docs.google.com/presentation/d/1tA6LCEVJJq4HS1mhUz15gK0qLB6lRXF2Fc9x_-r43aA/embed?start=true&loop=true&delayms=10000";
       lastDoc = doc;
     } else {
       document.getElementById("document").height = 50;
