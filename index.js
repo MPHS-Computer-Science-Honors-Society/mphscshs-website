@@ -65,6 +65,12 @@ function attendanceForm(form) {
     } else if (form == 5) {
       document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdfcZsT4_79b6TDpt7N1uSNQRPcXPkR8TDLh4pRbg9vquSgsw/viewform?embedded=true";
       lastForm = form;
+    } else if (form == 6) {
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSeRKRByI8JGvvn9Xs3l_t2iFjmaMrj5UiFiUgY6SffrOXM3Wg/viewform?embedded=true";
+      lastForm = form;
+    } else if (form == 7) {
+      document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdaBEoU0otGbNa0MAZJpIMcDqOniPba4KVA9mRGqr1HKovwFg/viewform?embedded=true";
+      lastForm = form;
     }
     document.getElementById("attendance-form").height = 700;
   }
