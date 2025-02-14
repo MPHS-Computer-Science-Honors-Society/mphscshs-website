@@ -68,10 +68,19 @@ function attendanceForm(form) {
     } else if (form == 6) {
       document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSeRKRByI8JGvvn9Xs3l_t2iFjmaMrj5UiFiUgY6SffrOXM3Wg/viewform?embedded=true";
       lastForm = form;
-    } else if (form == 7) {
+    } 
+    else if (form == 8) {
       document.getElementById("attendance-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdaBEoU0otGbNa0MAZJpIMcDqOniPba4KVA9mRGqr1HKovwFg/viewform?embedded=true";
       lastForm = form;
+    } else {
+      document.getElementById("attendance-form").height = 50;
+      document.getElementById("attendance-form").src = "";
+      return;
     }
+    if (window.innerWidth < 500) {
+      document.getElementById("attendance-form").width = "100%";
+    }
+    
     document.getElementById("attendance-form").height = 700;
   }
 }
@@ -95,6 +104,15 @@ function documents(doc) {
       lastDoc = doc;
     } else if (doc == 5) {
       document.getElementById("document").src = "https://docs.google.com/document/d/e/2PACX-1vTuwm5nI9oTp2YHEE6zefd2FPmer0YuqXAQwMWA0-mUAq87sOqvR0alb2bA55Zc23JxCpWHtlNtckcR/pub?embedded=true"
+      lastDoc = doc;
+    } else if (doc == 6) {
+      document.getElementById("document").src = "https://docs.google.com/presentation/d/e/2PACX-1vRQpFhYturib9nrlYpo9IFQydJMUNzOdNhE9ACa4Atv6uEBZMa4l44fSRfU8GtdoduwQdgKbRsa2ZfJ/embed?start=true&loop=true&delayms=10000";
+      lastDoc = doc;
+    } else if (doc == 7) {
+      document.getElementById("document").src = "https://docs.google.com/presentation/d/e/2PACX-1vRbxa-zHp9HUqyEJvo9UFcWtSgtG3cHmpl44WM996JyOm1B4aYwSwA2a8MuQuGzcSQCCColSrHvtc12/embed?start=true&loop=true&delayms=10000";
+      lastDoc = doc;
+    } else if (doc == 8) {
+      document.getElementById("document").src = "https://docs.google.com/presentation/d/e/2PACX-1vTGlTgExFkcLwVjZLs5y1EB9zsQ-K96F5l50St-Wa-c_IgCU0PZxjD4tzDGpgLkkycBRnfa0o0hQuKQ/embed?start=true&loop=true&delayms=10000";
       lastDoc = doc;
     } else {
       document.getElementById("document").height = 50;
